@@ -5,7 +5,7 @@ interface DirectionProps {
 
 export function NavegationBar({ direction, gap }: DirectionProps) {
     return (
-        <div className={`flex flex-${direction} items-center justify-evenly gap-${gap} font-medium text-gray-100 lg:text-lg lg:justify-center lg:gap-8`}>
+        <div className={`flex flex-${direction} items-center justify-evenly gap-${gap} font-medium text-gray-100 lg:text-lg lg:justify-center lg:gap-12`}>
             <a href='#'>
                 <p className='border-b border-ocean-blue-900 transition hover:border-orange-300'>
                     Home

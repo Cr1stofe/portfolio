@@ -1,35 +1,17 @@
-import { ImLinkedin } from 'react-icons/im'
-import { GrGithub } from 'react-icons/gr'
-import { MdEmail } from 'react-icons/md'
-import Link from 'next/link'
+import { SocialTag } from './SocialTag'
 
 export function ContactLinks() {
     return (
-        <div className='flex flex-col gap-12 w-48 text-gray-400'>
+        <div className='flex flex-col gap-12 w-48 text-gray-400 md:flex-row md:w-full md:items-center justify-around'>
 
             {/* tag linkedin */}
-            <Link href='https://www.linkedin.com/in/cristofe-albuquerque/'>
-                <div className='flex items-center justify-between py-3 cursor-pointer border-t border-gray-800 transition-all duration-150 hover:border-orange-300'>
-                    <p className='text-base'> linkedin </p>
-                    <ImLinkedin size={20} />
-                </div>
-            </Link>
+            <SocialTag link='https://www.linkedin.com/in/cristofe-albuquerque/' name='linkedin' />
 
             {/* tag github */}
-            <Link href='https://github.com/Cr1stofe'>
-                <div className='flex items-center justify-between py-3 cursor-pointer border-t border-gray-800 transition-all duration-150 hover:border-orange-300'>
-                    <p className='text-base'> github </p>
-                    <GrGithub size={20} />
-                </div>
-            </Link>
+            <SocialTag link='https://github.com/Cr1stofe' name='github' />
 
             {/* tag email */}
-            <Link href='mailto:cristofe.contact@gmail.com'>
-                <div className='flex items-center justify-between py-3 cursor-pointer border-t border-gray-800 transition-all duration-150 hover:border-orange-300'>
-                    <p className='text-base'> email </p>
-                    <MdEmail size={20} />
-                </div>
-            </Link>
+            <SocialTag link='mailto:cristofe.contact@gmail.com' name='email' />
         </div>
     )
 }

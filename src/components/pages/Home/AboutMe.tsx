@@ -48,10 +48,10 @@ export function AboutMe() {
                     </div>
 
                     {/* Button */}
-                    <button className='flex items-center justify-center px-4 py-2 rounded-lg gap-2 font-bold transition text-gray-100 text-lg bg-ocean-blue-700 hover:bg-ocean-blue-300'>
+                    <a href='/curriculo.pdf' download className='flex items-center justify-center px-4 py-2 rounded-lg gap-2 font-bold transition text-gray-100 text-lg bg-ocean-blue-700 hover:bg-ocean-blue-300'>
                         Currículo
                         <RiFileDownloadFill size={24} className='text-orange-300' />
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
