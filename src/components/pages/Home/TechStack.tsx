@@ -20,16 +20,16 @@ export function TechStack() {
 
                 {/* Icons */}
                 <div className='grid grid-cols-1 gap-8 items-center sm:grid-cols-2 lg:flex lg:gap-2'>
-                    <Image src={iconHtml} alt='' />
-                    <Image src={iconCss} alt='' />
-                    <Image src={iconTs} alt='' />
-                    <Image src={iconJs} alt='' />
-                    <Image src={iconReact} alt='' />
-                    <Image src={iconNext} alt='' />
-                    <Image src={iconTail} alt='' />
-                    <Image src={iconStyledC} alt='' />
-                    <Image src={iconFigma} alt='' />
-                    <Image src={iconSass} alt='' />
+                    <abbr title="HTML5"> <Image src={iconHtml} alt='' /> </abbr>
+                    <abbr title="CSS3"> <Image src={iconCss} alt='' /> </abbr>
+                    <abbr title="Typescript"> <Image src={iconTs} alt='' /> </abbr>
+                    <abbr title="Javascript"> <Image src={iconJs} alt='' /> </abbr>
+                    <abbr title="ReactJs"> <Image src={iconReact} alt='' /> </abbr>
+                    <abbr title="Next.js"> <Image src={iconNext} alt='' /> </abbr>
+                    <abbr title="Tailwind CSS"> <Image src={iconTail} alt='' /> </abbr>
+                    <abbr title="Styled Components"> <Image src={iconStyledC} alt='' /> </abbr>
+                    <abbr title="Figma"> <Image src={iconFigma} alt='' /> </abbr>
+                    <abbr title="Sass"> <Image src={iconSass} alt='' /> </abbr>
                 </div>
             </div>
     )
