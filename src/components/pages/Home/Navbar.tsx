@@ -30,7 +30,7 @@ export function Navbar() {
 
                 { /* Barra de navegação */}
                 <div className='text-4xl' onClick={() => setIsOpen(false)}>
-                    <NavegationBar direction='col' gap='8' color='gray-100' borderColor='-ocean-blue-900'/>
+                    <NavegationBar direction='col' gap='8' color='gray-100' borderColor='border-ocean-blue-900'/>
                 </div>
             </div >
 
@@ -46,7 +46,7 @@ export function Navbar() {
 
                     {/* Navbar Desktop */}
                     <div className='hidden md:block'>
-                        <NavegationBar direction='row' gap='8' color='ocean-blue-700' borderColor='-gray-300'/>
+                        <NavegationBar direction='row' gap='8' color='ocean-blue-700' borderColor='border-gray-300'/>
                     </div>
                 </nav>
             </header>

@@ -11,25 +11,25 @@ export function NavegationBar({ direction, gap, color, borderColor }: Navegation
         <div className={`flex flex-${direction} items-center justify-evenly gap-${gap} font-medium text-${color} lg:text-lg lg:justify-center lg:gap-12`}>
             {/* Opção Home */}
             <a href='#'>
-                <p className={`border-b border${borderColor} transition hover:border-orange-300`}>
+                <p className={`border-b ${borderColor} transition hover:border-orange-300`}>
                     Home
                 </p>
             </a>
             {/* Opção Sobre */}
             <a href='#about'>
-                <p className={`border-b border${borderColor} transition hover:border-orange-300`}>
+                <p className={`border-b ${borderColor} transition hover:border-orange-300`}>
                     Sobre
                 </p>
             </a>
             {/* Opção Projetos */}
             <a href='#projects'>
-                <p className={`border-b border${borderColor} transition hover:border-orange-300`}>
+                <p className={`border-b ${borderColor} transition hover:border-orange-300`}>
                     Projetos
                 </p>
             </a>
             {/* Opção Contato */}
             <a href='#contact'>
-                <p className={`border-b border${borderColor} transition hover:border-orange-300`}>
+                <p className={`border-b ${borderColor} transition hover:border-orange-300`}>
                     Contato
                 </p>
             </a>

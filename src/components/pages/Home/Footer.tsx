@@ -12,7 +12,7 @@ export function Footer() {
             <a href='/#'> <Image src={logo} alt='logo' height={32} width={160}/> </a>
 
             { /* Navegation */ }
-            <NavegationBar direction='row' gap='4' color='gray-100' borderColor='-ocean-blue-900'/>
+            <NavegationBar direction='row' gap='4' color='gray-100' borderColor='border-ocean-blue-900'/>
 
             { /* Text alt */ }
             <p className='text-gray-800 text-xs'>
