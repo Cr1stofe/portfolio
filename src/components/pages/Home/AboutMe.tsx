@@ -1,9 +1,11 @@
 import { HiMapPin } from 'react-icons/hi2'
 import { RiFileDownloadFill } from 'react-icons/ri'
+import { BsArrowRightShort } from 'react-icons/bs'
 
 import AboutMePhoto from '../../../assets/About-me-photo.png'
 
 import Image from "next/image";
+import Link from 'next/link';
 
 export function AboutMe() {
     return (
@@ -38,7 +40,12 @@ export function AboutMe() {
                     <div className='flex flex-col gap-4'>
                         <div className='flex flex-col gap-2'>
                             <strong className='text-gray-900 text-base'> EMAIL </strong>
-                            <p className='text-gray-900 text-sm'> cristofe.contact@gmail.com </p>
+                            <Link href='mailto:cristofe.contact@gmail.com'> 
+                                <p className='flex items-center gap-1 text-gray-900 text-sm group'> 
+                                    cristofe.contact@gmail.com 
+                                    <BsArrowRightShort size={24} className='transition-all duration-200 text-ocean-blue-700 group-hover:text-orange-300'/> 
+                                </p> 
+                            </Link>
                         </div>
 
                         <div className='flex flex-col gap-2'>

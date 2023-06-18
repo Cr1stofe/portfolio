@@ -8,7 +8,6 @@ import { CgMenuRightAlt } from 'react-icons/cg'
 
 import logo from '../../../assets/logo.svg'
 import Image from 'next/image'
-import { NavbarFullSize } from './NavbarFullSize'
 
 export function Navbar() {
     /* Saber se menu mobile está visível */
@@ -31,7 +30,7 @@ export function Navbar() {
 
                 { /* Barra de navegação */}
                 <div className='text-4xl' onClick={() => setIsOpen(false)}>
-                    <NavegationBar direction='col' gap='8'/>
+                    <NavegationBar direction='col' gap='8' color='gray-100' borderColor='-ocean-blue-900'/>
                 </div>
             </div >
 
@@ -46,7 +45,9 @@ export function Navbar() {
                     </div>
 
                     {/* Navbar Desktop */}
-                    <NavbarFullSize />
+                    <div className='hidden md:block'>
+                        <NavegationBar direction='row' gap='8' color='ocean-blue-700' borderColor='-gray-300'/>
+                    </div>
                 </nav>
             </header>
         </div>
