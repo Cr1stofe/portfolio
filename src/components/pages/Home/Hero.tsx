@@ -52,7 +52,7 @@ export function Hero() {
 
                 <div className='flex flex-col items-center justify-center gap-4 order-1 lg:order-2' >
                     {/* Main image */}
-                    <Image src={HeroPhoto} alt='' width={350} height={350} quality={80}/>
+                    <Image src={HeroPhoto} alt='' width={350} height={350} quality={80} priority/>
 
 
                     {/* Hero contact links */}
