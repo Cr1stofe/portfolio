@@ -4,7 +4,7 @@ import { ImLinkedin } from 'react-icons/im'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import HeroPhoto from '../../../assets/hero-photo.svg'
+import HeroPhoto from '../../../assets/hero-photo.png'
 import iconTs from '../../../assets/tech-icons/typescript-icon.svg'
 import iconReact from '../../../assets/tech-icons/react-icon.svg'
 import iconNext from '../../../assets/tech-icons/next-icon-black.svg'
@@ -52,7 +52,7 @@ export function Hero() {
 
                 <div className='flex flex-col items-center justify-center gap-4 order-1 lg:order-2' >
                     {/* Main image */}
-                    <Image src={HeroPhoto} alt='' width={250} height={250} className='md:h-[350px] w-[350px]' quality={80}/>
+                    <Image src={HeroPhoto} alt='' width={350} height={350} quality={80}/>
 
 
                     {/* Hero contact links */}

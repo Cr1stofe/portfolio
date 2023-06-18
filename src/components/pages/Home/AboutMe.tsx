@@ -1,7 +1,7 @@
 import { HiMapPin } from 'react-icons/hi2'
 import { RiFileDownloadFill } from 'react-icons/ri'
 
-import AboutMePhoto from '../../../assets/About-me-photo.svg'
+import AboutMePhoto from '../../../assets/About-me-photo.png'
 
 import Image from "next/image";
 
