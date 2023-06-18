@@ -11,7 +11,7 @@ export function AboutMe() {
         <div id='about' className="flex items-center justify-center bg-gray-400">
             <div className='flex flex-col items-center justify-center py-16 gap-9 sm:p-6 lg:flex-row md:px-16 md:max-w-7xl md:gap-28 md:min-h-screen md:justify-evenly'>
                 {/* Imagem Dev */}
-                <Image src={AboutMePhoto} alt='' />
+                <Image src={AboutMePhoto} alt='' height={600} width={530} quality={80}/>
 
                 {/* Container Infos */}
                 <div className='flex flex-col items-start gap-4 text-left px-8'>
