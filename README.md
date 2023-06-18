@@ -23,7 +23,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 | Desktop | Mobile  |
 ------------------- | ------------------- 
-<img src="https://github.com/Cr1stofe/Portfolio-SV/blob/82d9b5718d97f0d611e45698b652859391216408/Layouts/porftolio-desktop.png"> | <img src="https://github.com/Cr1stofe/Portfolio-SV/blob/d8e9fa60b50f1267c8ab40c89cd944388a5f9991/Layouts/portfolio-mobile.jpg">
+<img src="https://github.com/Cr1stofe/portfolio/blob/2d0b80ec2aae0274bc3385d14aab5db0408a8a81/Layouts_github/Desktop.png">
 
 ## <div id="post"> Post </div>
 
