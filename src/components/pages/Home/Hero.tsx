@@ -41,10 +41,10 @@ export function Hero() {
 
                         { /* Images technologies */ }
                         <div className='flex gap-6 items-center justify-center'>
-                            <Image src={iconTs} alt='icon typescript' width={40} height={40} />
-                            <Image src={iconReact} alt='icon react' width={40} height={40} />
-                            <Image src={iconNext} alt='icon next.js' width={40} height={40} />
-                            <Image src={iconTail} alt='icon tailwind' width={40} height={40} />
+                            <Image src={iconTs} alt='icon typescript' width={40} height={40} quality={80}/>
+                            <Image src={iconReact} alt='icon react' width={40} height={40} quality={80}/>
+                            <Image src={iconNext} alt='icon next.js' width={40} height={40} quality={80}/>
+                            <Image src={iconTail} alt='icon tailwind' width={40} height={40} quality={80}/>
                         </div>
                     </div>
 
@@ -52,7 +52,7 @@ export function Hero() {
 
                 <div className='flex flex-col items-center justify-center gap-4 order-1 lg:order-2' >
                     {/* Main image */}
-                    <Image src={HeroPhoto} alt='' width={250} height={250} className='md:h-[350px] w-[350px]' />
+                    <Image src={HeroPhoto} alt='' width={250} height={250} className='md:h-[350px] w-[350px]' quality={80}/>
 
 
                     {/* Hero contact links */}

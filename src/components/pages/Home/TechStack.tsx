@@ -20,16 +20,16 @@ export function TechStack() {
 
                 {/* Icons */}
                 <div className='grid grid-cols-1 gap-8 items-center sm:grid-cols-2 lg:flex lg:gap-2'>
-                    <abbr title="HTML5"> <Image src={iconHtml} alt='' /> </abbr>
-                    <abbr title="CSS3"> <Image src={iconCss} alt='' /> </abbr>
-                    <abbr title="Typescript"> <Image src={iconTs} alt='' /> </abbr>
-                    <abbr title="Javascript"> <Image src={iconJs} alt='' /> </abbr>
-                    <abbr title="ReactJs"> <Image src={iconReact} alt='' /> </abbr>
-                    <abbr title="Next.js"> <Image src={iconNext} alt='' /> </abbr>
-                    <abbr title="Tailwind CSS"> <Image src={iconTail} alt='' /> </abbr>
-                    <abbr title="Styled Components"> <Image src={iconStyledC} alt='' /> </abbr>
-                    <abbr title="Figma"> <Image src={iconFigma} alt='' /> </abbr>
-                    <abbr title="Sass"> <Image src={iconSass} alt='' /> </abbr>
+                    <abbr title="HTML5"> <Image src={iconHtml} alt='' quality={80}/> </abbr>
+                    <abbr title="CSS3"> <Image src={iconCss} alt='' quality={80}/> </abbr>
+                    <abbr title="Typescript"> <Image src={iconTs} alt='' quality={80}/> </abbr>
+                    <abbr title="Javascript"> <Image src={iconJs} alt='' quality={80}/> </abbr>
+                    <abbr title="ReactJs"> <Image src={iconReact} alt='' quality={80}/> </abbr>
+                    <abbr title="Next.js"> <Image src={iconNext} alt='' quality={80}/> </abbr>
+                    <abbr title="Tailwind CSS"> <Image src={iconTail} alt='' quality={80}/> </abbr>
+                    <abbr title="Styled Components"> <Image src={iconStyledC} alt='' quality={80}/> </abbr>
+                    <abbr title="Figma"> <Image src={iconFigma} alt='' quality={80}/> </abbr>
+                    <abbr title="Sass"> <Image src={iconSass} alt='' quality={80}/> </abbr>
                 </div>
             </div>
     )
