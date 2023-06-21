@@ -1,3 +1,4 @@
+import { Analytics } from '@/components/Analytics'
 import './globals.css'
 import {
   Roboto_Flex as Roboto,
@@ -21,21 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.png" sizes="any" />
-        {/* Google tag (gtag.js) */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRAKING}`}></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-  
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_TRAKING}');
-            `
-          }}
-        />
       </head>
-      <body className={`${roboto.variable} ${ibm.variable} font-sans`}> {children} </body>
+      <body className={`${roboto.variable} ${ibm.variable} font-sans`}> 
+        {children} 
+        <Analytics />
+      </body>
     </html>
   )
 }
