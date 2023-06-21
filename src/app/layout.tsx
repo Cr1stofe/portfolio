@@ -1,4 +1,4 @@
-import { Analytics } from '@/components/Analytics'
+import Analytics from '@/components/Analytics'
 import './globals.css'
 import {
   Roboto_Flex as Roboto,
@@ -23,10 +23,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
-      <body className={`${roboto.variable} ${ibm.variable} font-sans`}> 
-        {children} 
-        <Analytics />
-      </body>
+      <Analytics />
+      <body className={`${roboto.variable} ${ibm.variable} font-sans`}> {children} </body>
     </html>
   )
 }
