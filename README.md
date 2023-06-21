@@ -1,7 +1,7 @@
 <h1 align="center"> Portfolio Pessoal </h1>
 <p align="left"> Esse projeto foi desenvolvido inteiramente por mim, desde o design feito no Figma, ao desenvolvimento. </p>
 <p> O projeto é meu portfolio pessoal, onde irei apresentar meus projetos e minhas informações. </p>
-<p> Você pode acessar o site clicando <a href="https://cristofe-albuquerque.vercel.app/"> aqui </a>. </p> 
+<p> Você pode acessar o site clicando <a href="https://cr1stofe.com/"> aqui </a>. </p> 
 
 <p align="center">
   <a href="#tecnologias"> Tecnologias </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -27,4 +27,4 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## <div id="post"> Post </div>
 
-<a href=""> Post sobre este projeto no Linkedln </a>
+<a href="https://www.linkedin.com/posts/cristofe-albuquerque_react-tailwind-desenvolvimento-activity-7076537081740632066-E0e7?utm_source=share&utm_medium=member_desktop"> Post sobre este projeto no Linkedln </a>
