@@ -27,4 +27,4 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## <div id="post"> Post </div>
 
-<a href=""> Post sobre este projeto no Linkedln </a>
+<a href="https://www.linkedin.com/posts/cristofe-albuquerque_react-tailwind-desenvolvimento-activity-7076537081740632066-E0e7?utm_source=share&utm_medium=member_desktop"> Post sobre este projeto no Linkedln </a>
