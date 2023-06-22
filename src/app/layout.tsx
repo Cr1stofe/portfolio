@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
-      <Analytics />
+      <Analytics GA_TRACKING_ID={`${process.env.NEXT_PUBLIC_GA_TRAKING}`}/>
       <body className={`${roboto.variable} ${ibm.variable} font-sans`}> {children} </body>
     </html>
   )
