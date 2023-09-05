@@ -7,7 +7,7 @@ const GoogleAnalytics = ({ GA_TRACKING_ID }: { GA_TRACKING_ID: string }) => {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-JSWRM0N14D`}
       />
       <Script id="google-analytics">
         {`
@@ -15,7 +15,7 @@ const GoogleAnalytics = ({ GA_TRACKING_ID }: { GA_TRACKING_ID: string }) => {
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', '${GA_TRACKING_ID}');
+          gtag('config', 'G-JSWRM0N14D');
         `}
       </Script>
     </>
