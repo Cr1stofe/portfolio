@@ -1,7 +1,7 @@
 <h1 align="center"> Portfolio Pessoal </h1>
 <p align="left"> Esse projeto foi desenvolvido inteiramente por mim, desde o design feito no Figma, ao desenvolvimento. </p>
 <p> O projeto é meu portfolio pessoal, onde irei apresentar meus projetos e minhas informações. </p>
-<p> Você pode acessar o site clicando <a href="https://cr1stofe.com/"> aqui </a>. </p> 
+<p> Você pode acessar o site clicando <a href="https://portfolio-cr1stofe.vercel.app/"> aqui </a>. </p> 
 
 <p align="center">
   <a href="#tecnologias"> Tecnologias </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
