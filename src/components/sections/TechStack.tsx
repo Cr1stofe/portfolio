@@ -1,0 +1,96 @@
+import { Layout, Server, Database, Cloud, CheckCircle2 } from 'lucide-react'
+
+const categories = [
+    {
+        icon: <Layout className="w-5 h-5 text-orange-400" />,
+        label: 'Frontend & UI/UX',
+        skills: [
+            'Next.js (App Router & Turbopack)',
+            'React 19 & TypeScript Estrito',
+            'Zustand (Stores Atômicas)',
+            'React Hook Form + Zod',
+            'Tailwind CSS & SCSS Modules',
+        ],
+    },
+    {
+        icon: <Server className="w-5 h-5 text-orange-400" />,
+        label: 'Backend & APIs',
+        skills: [
+            'NestJS (Modules, Guards, Pipes)',
+            'Node.js (ES Modules)',
+            'Autenticação RBAC & HttpOnly',
+            'Streaming 206 Partial Content',
+            'Testes E2E & Vitest',
+        ],
+    },
+    {
+        icon: <Database className="w-5 h-5 text-orange-400" />,
+        label: 'Banco de Dados',
+        skills: [
+            'PostgreSQL Relacional',
+            'Prisma ORM (Schema & Migrations)',
+            'Enums Nativos & Constraints',
+            'Índices Compostos & Integridade',
+            'Otimização de Queries',
+        ],
+    },
+    {
+        icon: <Cloud className="w-5 h-5 text-orange-400" />,
+        label: 'DevOps & Infraestrutura',
+        skills: [
+            'Docker & Docker Compose',
+            'Caddy Server 2 (Reverse Proxy)',
+            'Oracle Cloud Infrastructure (OCI)',
+            'Cloudflare (WAF & SSL Strict)',
+            'Linux / Ubuntu Server & systemd',
+        ],
+    },
+]
+
+export function TechStack() {
+    return (
+        <section id="skills" className="py-20 md:py-28 bg-ocean-700 border-b border-ocean-900/40">
+            <div className="max-w-7xl mx-auto px-6 md:px-12">
+                <div className="max-w-3xl mb-14">
+                    <span className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3 block">
+                        Stack & Tecnologias
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
+                        Tecnologias que utilizo no dia a dia
+                    </h2>
+                    <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
+                        Ferramentas e tecnologias nas quais possuo domínio prático para criar aplicações resilientes, rápidas e seguras da interface ao deploy.
+                    </p>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {categories.map((cat, i) => (
+                        <div
+                            key={i}
+                            className="p-6 rounded-2xl bg-ocean-600/50 border border-ocean-500/50 hover:bg-ocean-600/80 hover:border-orange-500/50 transition-all duration-300 backdrop-blur-sm shadow-lg flex flex-col justify-between"
+                        >
+                            <div>
+                                <div className="flex items-center gap-3 mb-5 pb-4 border-b border-ocean-500/40">
+                                    <div className="p-2.5 rounded-xl bg-ocean-700/80 border border-ocean-500/60 shadow-inner">
+                                        {cat.icon}
+                                    </div>
+                                    <h3 className="font-bold text-white text-base">{cat.label}</h3>
+                                </div>
+
+                                <ul className="space-y-3">
+                                    {cat.skills.map((skill, si) => (
+                                        <li key={si} className="flex items-center gap-2.5 text-sm font-medium text-slate-100">
+                                            <CheckCircle2 size={15} className="text-orange-400 flex-shrink-0" />
+                                            <span>{skill}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+            </div>
+        </section>
+    )
+}

@@ -6,9 +6,19 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --color-ocean: #0d2941;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  box-sizing: border-box;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+::selection {
   background-color: #113657;
+  color: #ffffff;
 }
