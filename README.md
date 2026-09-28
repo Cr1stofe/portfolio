@@ -56,28 +56,33 @@ Construído com foco em **código limpo**, **arquitetura de componentes modular*
 ## 🛠️ Como Executar Localmente
 
 ### Pré-requisitos
+
 - [Node.js](https://nodejs.org/) (versão 20 ou superior)
 - [Yarn](https://yarnpkg.com/)
 
 ### Instalação & Execução
 
 1. Clone o repositório:
+
 ```bash
 git clone https://github.com/Cr1stofe/portfolio.git
 cd portfolio
 ```
 
 2. Instale as dependências:
+
 ```bash
 yarn
 ```
 
 3. (Opcional) Configure as variáveis de ambiente:
+
 ```bash
 cp .env.example .env.local
 ```
 
 4. Inicie o servidor de desenvolvimento:
+
 ```bash
 yarn dev
 ```
@@ -101,7 +106,8 @@ yarn start
 
 ## 👤 Autor
 
-**Cristofe Albuquerque**  
-- **GitHub:** [@Cr1stofe](https://github.com/Cr1stofe)  
-- **LinkedIn:** [/in/cristofe-albuquerque](https://www.linkedin.com/in/cristofe-albuquerque/)  
+**Cristofe Albuquerque**
+
+- **GitHub:** [@Cr1stofe](https://github.com/Cr1stofe)
+- **LinkedIn:** [/in/cristofe-albuquerque](https://www.linkedin.com/in/cristofe-albuquerque/)
 - **E-mail:** [cristofe.contact@gmail.com](mailto:cristofe.contact@gmail.com)

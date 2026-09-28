@@ -14,7 +14,7 @@ const config: Config = {
       },
       colors: {
         ocean: {
-          50:  '#eef4f9',
+          50: '#eef4f9',
           100: '#d5e5f1',
           200: '#9fc5de',
           400: '#2b6389',
@@ -24,7 +24,7 @@ const config: Config = {
           900: '#06131e',
         },
         brand: {
-          50:  '#f0f7ff',
+          50: '#f0f7ff',
           100: '#dbeeff',
           200: '#baddfd',
           500: '#0e7abe',
@@ -36,9 +36,9 @@ const config: Config = {
         },
       },
       boxShadow: {
-        'subtle':    '0 1px 3px 0 rgba(0,0,0,0.05), 0 1px 2px -1px rgba(0,0,0,0.04)',
-        'card':      '0 4px 20px -2px rgba(13,41,65,0.08)',
-        'card-hover':'0 10px 32px -4px rgba(13,41,65,0.14)',
+        subtle: '0 1px 3px 0 rgba(0,0,0,0.05), 0 1px 2px -1px rgba(0,0,0,0.04)',
+        card: '0 4px 20px -2px rgba(13,41,65,0.08)',
+        'card-hover': '0 10px 32px -4px rgba(13,41,65,0.14)',
       },
     },
   },
