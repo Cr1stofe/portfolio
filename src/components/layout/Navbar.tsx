@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useTranslations } from 'next-intl'
 import { NavigationBar } from './NavigationBar'
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
 import { X, Menu, ArrowUpRight } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa6'
 import logo from '@/assets/logo.svg'
@@ -10,6 +12,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export function Navbar() {
+    const t = useTranslations('nav')
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [mounted, setMounted] = useState(false);
@@ -57,17 +60,20 @@ export function Navbar() {
                         setIsOpen(false);
                     }}
                     className="flex items-center gap-3 group cursor-pointer"
-                    title="Voltar ao início"
+                    title={t('backToTop')}
                 >
                     <Image src={logo} alt="Cr1stofe" height={32} width={145} priority className="transition-transform group-hover:scale-[1.02]" />
                 </a>
-                <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 text-slate-800 hover:text-slate-900 rounded-lg bg-slate-100 transition-colors"
-                    aria-label="Fechar menu"
-                >
-                    <X size={24} />
-                </button>
+                <div className="flex items-center gap-3">
+                    <LanguageSwitcher />
+                    <button
+                        onClick={() => setIsOpen(false)}
+                        className="p-2 text-slate-800 hover:text-slate-900 rounded-lg bg-slate-100 transition-colors"
+                        aria-label={t('closeMenu')}
+                    >
+                        <X size={24} />
+                    </button>
+                </div>
             </div>
 
             <div className="flex-1 overflow-y-auto px-6 pt-8 pb-6 flex flex-col justify-start">
@@ -80,7 +86,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className="w-full text-center py-3.5 px-5 rounded-xl text-sm font-bold text-white bg-ocean-700 hover:bg-ocean-600 transition-colors shadow-sm"
                 >
-                    Entrar em Contato
+                    {t('contactCta')}
                 </a>
                 <div className="flex items-center justify-center gap-3">
                     <Link 
@@ -116,15 +122,17 @@ export function Navbar() {
                         href="#" 
                         onClick={scrollToTop} 
                         className="flex items-center gap-3 group cursor-pointer"
-                        title="Voltar ao início"
+                        title={t('backToTop')}
                     >
                         <Image src={logo} alt="Cr1stofe" height={32} width={145} className="transition-transform group-hover:scale-[1.02]" />
                     </a>
 
-                    <div className="hidden md:flex items-center gap-10">
+                    <div className="hidden md:flex items-center gap-8">
                         <NavigationBar direction="row" />
                         
                         <div className="flex items-center gap-3 pl-4 border-l border-slate-200">
+                            <LanguageSwitcher />
+
                             <Link 
                                 href="https://github.com/Cr1stofe" 
                                 target="_blank"
@@ -143,19 +151,20 @@ export function Navbar() {
                             </Link>
                             <a 
                                 href="#contact"
-                                className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-ocean-700 hover:bg-ocean-600 rounded-lg shadow-sm transition-all hover:shadow hover:-translate-y-0.5 ml-2"
+                                className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white bg-ocean-700 hover:bg-ocean-600 rounded-lg shadow-sm transition-all hover:shadow hover:-translate-y-0.5 ml-1"
                             >
-                                Contato
+                                {t('contact')}
                                 <ArrowUpRight size={14} className="text-orange-400" />
                             </a>
                         </div>
                     </div>
 
-                    <div className="md:hidden">
+                    <div className="flex items-center gap-2 md:hidden">
+                        <LanguageSwitcher />
                         <button
                             onClick={() => setIsOpen(true)}
                             className="p-2 text-slate-800 hover:text-slate-900 rounded-lg bg-slate-100 transition-colors"
-                            aria-label="Abrir menu"
+                            aria-label={t('openMenu')}
                         >
                             <Menu size={24} />
                         </button>

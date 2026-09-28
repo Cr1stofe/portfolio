@@ -1,65 +1,45 @@
+import { getTranslations } from 'next-intl/server'
 import { Layout, Server, Database, Cloud, CheckCircle2 } from 'lucide-react'
 
-const categories = [
-    {
-        icon: <Layout className="w-5 h-5 text-orange-400" />,
-        label: 'Frontend & UI/UX',
-        skills: [
-            'Next.js (App Router & Turbopack)',
-            'React 19 & TypeScript Estrito',
-            'Zustand (Stores Atômicas)',
-            'React Hook Form + Zod',
-            'Tailwind CSS & SCSS Modules',
-        ],
-    },
-    {
-        icon: <Server className="w-5 h-5 text-orange-400" />,
-        label: 'Backend & APIs',
-        skills: [
-            'NestJS (Modules, Guards, Pipes)',
-            'Node.js (ES Modules)',
-            'Autenticação RBAC & HttpOnly',
-            'Streaming 206 Partial Content',
-            'Testes E2E & Vitest',
-        ],
-    },
-    {
-        icon: <Database className="w-5 h-5 text-orange-400" />,
-        label: 'Banco de Dados',
-        skills: [
-            'PostgreSQL Relacional',
-            'Prisma ORM (Schema & Migrations)',
-            'Enums Nativos & Constraints',
-            'Índices Compostos & Integridade',
-            'Otimização de Queries',
-        ],
-    },
-    {
-        icon: <Cloud className="w-5 h-5 text-orange-400" />,
-        label: 'DevOps & Infraestrutura',
-        skills: [
-            'Docker & Docker Compose',
-            'Caddy Server 2 (Reverse Proxy)',
-            'Oracle Cloud Infrastructure (OCI)',
-            'Cloudflare (WAF & SSL Strict)',
-            'Linux / Ubuntu Server & systemd',
-        ],
-    },
-]
+export async function TechStack({ locale }: { locale: string }) {
+    const t = await getTranslations({ locale, namespace: 'stack' })
 
-export function TechStack() {
+
+    const categories = [
+        {
+            icon: <Layout className="w-5 h-5 text-orange-400" />,
+            label: t('categories.frontend'),
+            skills: t.raw('items.frontend') as string[],
+        },
+        {
+            icon: <Server className="w-5 h-5 text-orange-400" />,
+            label: t('categories.backend'),
+            skills: t.raw('items.backend') as string[],
+        },
+        {
+            icon: <Database className="w-5 h-5 text-orange-400" />,
+            label: t('categories.database'),
+            skills: t.raw('items.database') as string[],
+        },
+        {
+            icon: <Cloud className="w-5 h-5 text-orange-400" />,
+            label: t('categories.devops'),
+            skills: t.raw('items.devops') as string[],
+        },
+    ]
+
     return (
-        <section id="skills" className="py-20 md:py-28 bg-ocean-700 border-b border-ocean-900/40">
+        <section id="skills" className="py-14 md:py-20 bg-ocean-700 border-b border-ocean-900/40">
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 <div className="max-w-3xl mb-14">
                     <span className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3 block">
-                        Stack & Tecnologias
+                        {t('tag')}
                     </span>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-4">
-                        Tecnologias que utilizo no dia a dia
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+                        {t('title')}
                     </h2>
                     <p className="text-slate-200 text-base sm:text-lg leading-relaxed">
-                        Ferramentas e tecnologias nas quais possuo domínio prático para criar aplicações resilientes, rápidas e seguras da interface ao deploy.
+                        {t('desc')}
                     </p>
                 </div>
 
@@ -89,7 +69,6 @@ export function TechStack() {
                         </div>
                     ))}
                 </div>
-
             </div>
         </section>
     )

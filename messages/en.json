@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "title": "Cr1stofe | Full Stack Developer",
+    "description": "Portfolio of Cristofe Albuquerque — Full Stack Developer specialized in Next.js, NestJS, TypeScript, and PostgreSQL."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Stack",
+    "projects": "Projects",
+    "contact": "Contact",
+    "contactCta": "Get in Touch",
+    "backToTop": "Back to top",
+    "closeMenu": "Close menu",
+    "openMenu": "Open menu"
+  },
+  "hero": {
+    "badge": "Available for new projects",
+    "title": "Full Stack Developer focused on building modern and scalable applications",
+    "intro": "Hi, I'm <strongName>Cristofe Albuquerque</strongName>. I build end-to-end solutions — bridging fluid interfaces in <strongTech>Next.js</strongTech> with robust <strongTech>NestJS</strongTech> backends, relational databases, and production deployments.",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch",
+    "connect": "Connect:",
+    "imageAlt": "Cristofe Albuquerque - Full Stack Developer"
+  },
+  "about": {
+    "tag": "About me",
+    "title": "Software engineering focused on architecture, security, and real-world production.",
+    "p1": "My core foundation is in frontend engineering, crafting fast, responsive, and polished interfaces with Next.js, React, and TypeScript.",
+    "p2": "Expanding this background into the full stack ecosystem, I build structured NestJS APIs, model PostgreSQL databases, and manage Docker deployments on Linux and Cloud servers.",
+    "p3": "I focus on clean code, well-defined data contracts with Zod, and decoupled architectures that keep codebases easy to maintain.",
+    "viewStack": "View tech stack",
+    "viewProjects": "View featured projects",
+    "cardTag": "Engineering & Patterns",
+    "cardTitle": "How I build applications",
+    "cardBadge": "Production",
+    "principles": {
+      "p1": {
+        "title": "BFF Architecture & Modern Frontend",
+        "desc": "Next.js App Router integrated with enterprise APIs, hybrid rendering, and secure route handlers."
+      },
+      "p2": {
+        "title": "Authentication & Security",
+        "desc": "Granular RBAC access control, secure HttpOnly cookies, and end-to-end data protection."
+      },
+      "p3": {
+        "title": "Strict Typing & Validation",
+        "desc": "Strict TypeScript across frontend and backend, with real-time schema validation via Zod."
+      },
+      "p4": {
+        "title": "Containers & Infrastructure",
+        "desc": "Isolated environments with Docker Compose, Caddy reverse proxy, and optimized video streaming."
+      }
+    }
+  },
+  "stack": {
+    "tag": "Stack & Technologies",
+    "title": "Technologies I use daily",
+    "desc": "Tools and technologies in which I have practical hands-on experience to create resilient, fast, and secure applications from UI to deployment.",
+    "categories": {
+      "frontend": "Frontend & UI/UX",
+      "backend": "Backend & APIs",
+      "database": "Database",
+      "devops": "DevOps & Infrastructure"
+    },
+    "items": {
+      "frontend": [
+        "Next.js (App Router & Turbopack)",
+        "React 19 & Strict TypeScript",
+        "Zustand (Atomic Stores)",
+        "React Hook Form + Zod",
+        "Tailwind CSS & SCSS Modules"
+      ],
+      "backend": [
+        "NestJS (Modules, Guards, Pipes)",
+        "Node.js (ES Modules)",
+        "RBAC & HttpOnly Authentication",
+        "Streaming 206 Partial Content",
+        "E2E Testing & Vitest"
+      ],
+      "database": [
+        "Relational PostgreSQL",
+        "Prisma ORM (Schema & Migrations)",
+        "Native Enums & Constraints",
+        "Composite Indexes & Integrity",
+        "Query Optimization"
+      ],
+      "devops": [
+        "Docker & Docker Compose",
+        "Caddy Server 2 (Reverse Proxy)",
+        "Oracle Cloud Infrastructure (OCI)",
+        "Cloudflare (WAF & SSL Strict)",
+        "Linux / Ubuntu Server & systemd"
+      ]
+    }
+  },
+  "projects": {
+    "tag": "Projects & Code",
+    "title": "Featured Applications & Projects",
+    "desc": "End-to-end applications — from relational data modeling and enterprise APIs to modern, responsive interfaces.",
+    "highlightsLabel": "Key Features:",
+    "viewRepo": "View repository on GitHub",
+    "items": {
+      "lmsFront": {
+        "title": "LMS — Next.js Frontend",
+        "category": "Frontend & BFF",
+        "status": "In development",
+        "description": "Educational platform built with Next.js App Router and BFF architecture. Focused on end-to-end security, efficient on-demand media playback, and a fluid, responsive user experience.",
+        "h1": "HTML5 video player with HTTP Range Requests support (206 Partial Content)",
+        "h2": "HttpOnly cookie authentication with SameSite and edge middleware",
+        "h3": "BFF architecture with strict real-time schema validation via Zod + React Hook Form",
+        "h4": "Atomic state management with Zustand and modular styling with SCSS Modules"
+      },
+      "lmsNest": {
+        "title": "LMS — NestJS Backend",
+        "category": "Backend & API",
+        "status": "In development",
+        "description": "Scalable enterprise API built with NestJS and PostgreSQL, focused on high-performance secure streaming, domain-driven architecture, and advanced security.",
+        "h1": "On-demand streaming (HTTP 206) protected and offloaded by Caddy via X-Accel-Redirect",
+        "h2": "Granular RBAC access control, secure __Secure-sid cookie sessions, and Argon2id + Salt + Pepper hashing",
+        "h3": "Automated testing with Vitest and relational data modeling in PostgreSQL with Prisma ORM",
+        "h4": "Container orchestration with Docker Compose, health checks, isolated networks, and optimized multi-stage builds"
+      },
+      "lmsExpress": {
+        "title": "LMS — Express API",
+        "category": "Backend & API",
+        "status": "Architectural base",
+        "description": "First version of the platform API built with Express and TypeScript. Served as the validation foundation for the subsequent structured migration to the NestJS ecosystem.",
+        "h1": "RESTful API with typed TypeScript routes and JWT authentication",
+        "h2": "Relational PostgreSQL data modeling and direct SQL queries without ORM",
+        "h3": "Core study foundation that guided architectural decisions in NestJS"
+      }
+    }
+  },
+  "contact": {
+    "tag": "Contact & Connections",
+    "title": "Let's talk about your next project?",
+    "desc": "I am open to opportunities as a Full Stack or Frontend Developer, freelance projects, and new technical challenges."
+  },
+  "footer": {
+    "rights": "Cristofe Albuquerque. All rights reserved."
+  }
+}
