@@ -10,11 +10,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${siteUrl}/${locale}`,
     lastModified: currentDate,
     changeFrequency: 'monthly',
-    priority: locale === 'pt' ? 1.0 : 0.9,
+    priority: locale === 'en' ? 1.0 : 0.9,
     alternates: {
       languages: {
-        pt: `${siteUrl}/pt`,
         en: `${siteUrl}/en`,
+        pt: `${siteUrl}/pt`,
+        'en-US': `${siteUrl}/en`,
+        'pt-BR': `${siteUrl}/pt`,
+        'x-default': `${siteUrl}/en`,
       },
     },
   }));

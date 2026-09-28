@@ -88,8 +88,10 @@ export async function Hero({ locale }: { locale: string }) {
                 alt={t('imageAlt')}
                 width={400}
                 height={400}
-                quality={95}
+                quality={90}
                 priority
+                fetchPriority="high"
+                loading="eager"
                 sizes="(max-width: 640px) 285px, (max-width: 1024px) 340px, 380px"
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
               />

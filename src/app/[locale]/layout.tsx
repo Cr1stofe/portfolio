@@ -33,8 +33,11 @@ export async function generateMetadata({
     alternates: {
       canonical: `/${locale}`,
       languages: {
-        'pt-BR': '/pt',
+        en: '/en',
+        pt: '/pt',
         'en-US': '/en',
+        'pt-BR': '/pt',
+        'x-default': '/en',
       },
     },
     keywords: [
