@@ -2,7 +2,12 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { GitBranch, ArrowUpRight } from 'lucide-react';
+import {
+  GitBranch,
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+} from 'lucide-react';
 import { FaGithub } from 'react-icons/fa6';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
@@ -191,60 +196,108 @@ export function ProjectsCarousel({
     align: 'start',
     containScroll: 'trimSnaps',
     dragFree: false,
-    breakpoints: {
-      '(min-width: 1024px)': { active: false },
-    },
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
 
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
-    onSelect();
-
-    return () => {
-      emblaApi.off('select', onSelect);
-      emblaApi.off('reInit', onSelect);
-    };
-  }, [emblaApi, onSelect]);
-
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
   const scrollTo = useCallback(
     (index: number) => emblaApi && emblaApi.scrollTo(index),
     [emblaApi]
   );
 
-  return (
-    <div>
-      <div className="lg:hidden">
-        <div
-          className="-mx-6 overflow-hidden px-6 py-2 sm:-mx-12 sm:px-12"
-          ref={emblaRef}
-        >
-          <div className="flex gap-4 sm:gap-6">
-            {projects.map((project, i) => (
-              <div
-                key={i}
-                className="min-w-0 max-w-[360px] flex-[0_0_92%] sm:max-w-[400px] sm:flex-[0_0_80%]"
-              >
-                <ProjectCard
-                  project={project}
-                  highlightsLabel={highlightsLabel}
-                  viewRepo={viewRepo}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+  const updateState = useCallback(() => {
+    if (!emblaApi) return;
+    const snaps = emblaApi.scrollSnapList();
+    const snap = emblaApi.selectedScrollSnap();
+    setScrollSnaps(snaps);
+    setSelectedIndex(Math.min(snap, Math.max(0, snaps.length - 1)));
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
 
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    updateState();
+    emblaApi.on('select', updateState);
+    emblaApi.on('reInit', updateState);
+
+    return () => {
+      emblaApi.off('select', updateState);
+      emblaApi.off('reInit', updateState);
+    };
+  }, [emblaApi, updateState]);
+
+  const hasMultipleSnaps = scrollSnaps.length > 1;
+
+  return (
+    <div className="relative">
+      {hasMultipleSnaps && (
+        <div className="mb-4 hidden items-center justify-end gap-2.5 sm:flex">
+          <button
+            type="button"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+            className={cn(
+              'flex h-10 w-10 items-center justify-center rounded-xl border transition-all',
+              canScrollPrev
+                ? 'shadow-xs border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50'
+                : 'cursor-not-allowed border-slate-200 bg-slate-100/70 text-slate-400 opacity-60'
+            )}
+            aria-label="Projeto anterior"
+          >
+            <ChevronLeft size={18} />
+          </button>
+          <button
+            type="button"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+            className={cn(
+              'flex h-10 w-10 items-center justify-center rounded-xl border transition-all',
+              canScrollNext
+                ? 'shadow-xs border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50'
+                : 'cursor-not-allowed border-slate-200 bg-slate-100/70 text-slate-400 opacity-60'
+            )}
+            aria-label="Próximo projeto"
+          >
+            <ChevronRight size={18} />
+          </button>
+        </div>
+      )}
+
+      <div
+        className="-mx-6 -my-3 overflow-hidden px-6 py-6 sm:-mx-12 sm:px-12"
+        ref={emblaRef}
+      >
+        <div className="flex gap-4 sm:gap-6">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className="min-w-0 flex-[0_0_92%] sm:flex-[0_0_80%] md:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(33.333333%-16px)]"
+            >
+              <ProjectCard
+                project={project}
+                highlightsLabel={highlightsLabel}
+                viewRepo={viewRepo}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {hasMultipleSnaps && (
         <div className="flex items-center justify-center gap-2 pt-6">
-          {projects.map((_, index) => (
+          {scrollSnaps.map((_, index) => (
             <button
               key={index}
               type="button"
@@ -255,22 +308,11 @@ export function ProjectsCarousel({
                   ? 'h-2 w-7 bg-ocean-700'
                   : 'h-2 w-2 bg-slate-300 hover:bg-slate-400'
               )}
-              aria-label={`Ir para o projeto ${index + 1}`}
+              aria-label={`Ir para a página ${index + 1} de projetos`}
             />
           ))}
         </div>
-      </div>
-
-      <div className="hidden gap-6 lg:grid lg:grid-cols-3">
-        {projects.map((project, i) => (
-          <ProjectCard
-            key={i}
-            project={project}
-            highlightsLabel={highlightsLabel}
-            viewRepo={viewRepo}
-          />
-        ))}
-      </div>
+      )}
     </div>
   );
 }

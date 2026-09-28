@@ -129,6 +129,15 @@
         "h1": "API RESTful com rotas tipadas em TypeScript e JWT",
         "h2": "Modelagem e consultas relacionais no PostgreSQL sem ORM",
         "h3": "Base de estudo que direcionou as decisões de arquitetura no NestJS"
+      },
+      "portfolio": {
+        "title": "Portfólio Pessoal",
+        "category": "Frontend",
+        "status": "Em Produção",
+        "description": "Aplicação web desenvolvida com Next.js 16 para apresentar projetos e experiências, com foco em alta performance, suporte multilíngue nativo e testes automatizados.",
+        "h1": "Pré-renderização estática (SSG) e i18n nativo (PT/EN) com next-intl",
+        "h2": "Testes automatizados de componentes e utilitários com Vitest e Testing Library",
+        "h3": "Pipeline de integração contínua (CI) no GitHub Actions e SEO técnico com Schema.org"
       }
     }
   },

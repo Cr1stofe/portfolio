@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { PlayCircle, Layers, Server } from 'lucide-react';
+import { PlayCircle, Layers, Server, Code2 } from 'lucide-react';
 import {
   ProjectsCarousel,
   type ProjectItem,
@@ -58,6 +58,31 @@ export async function Projects({ locale }: { locale: string }) {
       dark: true,
     },
     {
+      title: t('items.portfolio.title'),
+      category: t('items.portfolio.category'),
+      status: t('items.portfolio.status'),
+      description: t('items.portfolio.description'),
+      highlights: [
+        t('items.portfolio.h1'),
+        t('items.portfolio.h2'),
+        t('items.portfolio.h3'),
+      ],
+      stack: [
+        'Next.js 16',
+        'React 19',
+        'TypeScript',
+        'Vitest',
+        'Tailwind CSS',
+        'CI/CD',
+      ],
+      githubUrl: 'https://github.com/Cr1stofe/portfolio',
+      featuredIcon: <Code2 className="h-5 w-5" />,
+      accentBg: 'bg-white',
+      accentBorder: 'border-slate-200',
+      accentIcon: 'bg-slate-100 border-slate-200 text-ocean-700',
+      accentHover: 'group-hover:text-ocean-700',
+    },
+    {
       title: t('items.lmsExpress.title'),
       category: t('items.lmsExpress.category'),
       status: t('items.lmsExpress.status'),
@@ -69,11 +94,12 @@ export async function Projects({ locale }: { locale: string }) {
       ],
       stack: ['Express', 'Node.js', 'PostgreSQL', 'JWT', 'TypeScript'],
       githubUrl: 'https://github.com/Cr1stofe/lms-express-postgres',
-      featuredIcon: <Server className="h-5 w-5" />,
-      accentBg: 'bg-white',
-      accentBorder: 'border-slate-200',
-      accentIcon: 'bg-slate-100 border-slate-200 text-slate-700',
-      accentHover: 'group-hover:text-slate-900',
+      featuredIcon: <Server className="h-5 w-5 text-orange-400" />,
+      accentBg: 'bg-ocean-700',
+      accentBorder: 'border-ocean-600',
+      accentIcon: 'bg-ocean-600/80 border-ocean-500 text-white',
+      accentHover: 'group-hover:text-white',
+      dark: true,
     },
   ];
 

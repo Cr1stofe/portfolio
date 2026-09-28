@@ -129,6 +129,15 @@
         "h1": "RESTful API with typed TypeScript routes and JWT authentication",
         "h2": "Relational PostgreSQL data modeling and direct SQL queries without ORM",
         "h3": "Core study foundation that guided architectural decisions in NestJS"
+      },
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "category": "Frontend",
+        "status": "In Production",
+        "description": "Modern web application built with Next.js 16 to showcase projects and engineering experience, featuring native multilingual support and automated tests.",
+        "h1": "Static Site Generation (SSG) and native i18n (PT/EN) with next-intl",
+        "h2": "Automated component and utility testing with Vitest and Testing Library",
+        "h3": "Continuous integration (CI) pipeline with GitHub Actions and Schema.org SEO"
       }
     }
   },
