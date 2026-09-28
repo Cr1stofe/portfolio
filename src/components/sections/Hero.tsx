@@ -81,6 +81,7 @@ export async function Hero({ locale }: { locale: string }) {
                                 height={400}
                                 quality={95}
                                 priority
+                                sizes="(max-width: 640px) 285px, (max-width: 1024px) 340px, 380px"
                                 className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-[1.02]"
                             />
                             
