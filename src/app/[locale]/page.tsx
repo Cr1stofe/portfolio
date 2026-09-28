@@ -1,17 +1,17 @@
 import { routing } from '@/i18n/routing';
-import { Navbar } from "@/components/layout/Navbar";
-import { Hero } from "@/components/sections/Hero";
-import { AboutMe } from "@/components/sections/AboutMe";
-import { TechStack } from "@/components/sections/TechStack";
-import { Projects } from "@/components/sections/Projects";
-import { Contact } from "@/components/sections/Contact";
+import { Navbar } from '@/components/layout/Navbar';
+import { Hero } from '@/components/sections/Hero';
+import { AboutMe } from '@/components/sections/AboutMe';
+import { TechStack } from '@/components/sections/TechStack';
+import { Projects } from '@/components/sections/Projects';
+import { Contact } from '@/components/sections/Contact';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function HomePage({
-  params
+  params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
@@ -28,4 +28,3 @@ export default async function HomePage({
     </main>
   );
 }
-
