@@ -82,18 +82,18 @@ export async function Hero({ locale }: { locale: string }) {
           </div>
 
           <div className="order-1 flex justify-center lg:order-2 lg:col-span-5 lg:justify-end">
-            <div className="group relative aspect-square w-[285px] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl sm:w-[340px] lg:w-[380px]">
+            <div className="relative aspect-square w-[285px] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl sm:w-[340px] lg:w-[380px]">
               <Image
                 src={ProfileImage}
                 alt={t('imageAlt')}
                 width={400}
                 height={400}
-                quality={90}
+                quality={95}
                 priority
                 fetchPriority="high"
                 loading="eager"
-                sizes="(max-width: 640px) 285px, (max-width: 1024px) 340px, 380px"
-                className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                sizes="(max-width: 640px) 570px, (max-width: 1024px) 680px, 760px"
+                className="h-full w-full object-cover object-top"
               />
 
               <div className="absolute bottom-3 left-3 right-3 flex justify-center lg:hidden">
