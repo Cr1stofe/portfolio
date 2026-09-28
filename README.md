@@ -2,7 +2,7 @@
 
 Portfólio moderno desenvolvido para apresentar projetos, competências técnicas e experiências em desenvolvimento Full Stack de alta performance.
 
-Construído com foco em **código limpo**, **arquitetura de componentes modular**, **performance (RSC)** e **acessibilidade**.
+Construído com foco em **código limpo**, **arquitetura de componentes modular**, **performance (RSC)**, **internacionalização (i18n)** e **acessibilidade**.
 
 ---
 
@@ -10,6 +10,7 @@ Construído com foco em **código limpo**, **arquitetura de componentes modular*
 
 - **Framework:** [Next.js 16](https://nextjs.org/) (App Router & Turbopack)
 - **Biblioteca Base:** [React 19](https://react.dev/)
+- **Internacionalização:** [next-intl](https://next-intl.dev/) (Suporte multilíngue PT / EN com detecção automática)
 - **Linguagem:** [TypeScript 5](https://www.typescriptlang.org/) (Tipagem Estrita)
 - **Estilização:** [Tailwind CSS 3](https://tailwindcss.com/)
 - **Analytics:** `@next/third-parties/google` (Google Analytics 4 otimizado)
@@ -20,9 +21,10 @@ Construído com foco em **código limpo**, **arquitetura de componentes modular*
 
 ## ⚡ Destaques de Arquitetura & UX
 
+- **Internacionalização (i18n):** Suporte completo para Inglês (`/en`) e Português (`/pt`), com detecção automática do idioma do navegador (`Accept-Language`), metadados dinâmicos e seletor de idiomas interativo.
 - **React Server Components (RSC):** Seções estáticas renderizadas inteiramente no servidor para minimizar o bundle de JavaScript no cliente.
-- **Client Components Otimizados:** Utilizados estritamente onde há interatividade do navegador (Menu Mobile com `createPortal`, controle de scroll).
-- **SEO & Metadados Estruturados:** Open Graph, Twitter Card, tags semânticas e `lang="pt-BR"` para compartilhamento e indexação otimizada.
+- **Client Components Otimizados:** Utilizados estritamente onde há interatividade do navegador (Menu Mobile com `createPortal`, controle de scroll e Language Switcher).
+- **SEO & Metadados Estruturados:** Open Graph e Twitter Card dinâmicos por idioma, tags semânticas e `lang` dinâmico para indexação otimizada.
 - **Responsividade & Design System:** Layout totalmente adaptável para mobile, tablet e desktop com micro-interações fluidas.
 
 ---
@@ -30,17 +32,23 @@ Construído com foco em **código limpo**, **arquitetura de componentes modular*
 ## 📁 Estrutura de Pastas
 
 ```text
-src/
-├── app/
-│   ├── layout.tsx       # Root layout com fontes, metadata e analytics
-│   ├── page.tsx         # Página principal estruturando as seções
-│   ├── icon.png         # Favicon gerenciado nativamente pelo App Router
-│   └── globals.css      # Diretivas Tailwind e estilos base
-├── components/
-│   ├── layout/          # Navbar, NavigationBar e Footer
-│   ├── sections/        # Hero, AboutMe, TechStack, Projects, Contact
-│   └── ui/              # Componentes visuais atômicos (SocialTag, ContactLinks)
-└── assets/              # Logotipos e imagens otimizadas
+├── messages/
+│   ├── en.json          # Dicionário em Inglês (Vocabulário técnico sênior)
+│   └── pt.json          # Dicionário em Português
+├── src/
+│   ├── app/
+│   │   ├── [locale]/
+│   │   │   ├── layout.tsx   # Root layout com fonts, dynamic metadata e i18n provider
+│   │   │   └── page.tsx     # Landing page traduzida
+│   │   ├── icon.png         # Favicon gerenciado nativamente pelo App Router
+│   │   └── globals.css      # Diretivas Tailwind e estilos base
+│   ├── components/
+│   │   ├── layout/          # Navbar, NavigationBar e Footer
+│   │   ├── sections/        # Hero, AboutMe, TechStack, Projects, Contact
+│   │   └── ui/              # SocialTag, ContactLinks e LanguageSwitcher
+│   ├── i18n/                # Configurações de roteamento e request do next-intl
+│   ├── middleware.ts        # Negociação de idioma e redirects automáticos
+│   └── assets/              # Logotipos e imagens otimizadas
 ```
 
 ---

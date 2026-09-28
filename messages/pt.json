@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "title": "Cr1stofe | Desenvolvedor Full Stack",
+    "description": "Portfolio de Cristofe Albuquerque — Desenvolvedor Full Stack especializado em Next.js, NestJS, TypeScript e PostgreSQL."
+  },
+  "nav": {
+    "about": "Sobre",
+    "skills": "Stack",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "contactCta": "Entrar em Contato",
+    "backToTop": "Voltar ao início",
+    "closeMenu": "Fechar menu",
+    "openMenu": "Abrir menu"
+  },
+  "hero": {
+    "badge": "Disponível para novos projetos",
+    "title": "Desenvolvedor Full Stack focado em criar aplicações modernas e escaláveis",
+    "intro": "Olá, sou o <strongName>Cristofe Albuquerque</strongName>. Desenvolvo soluções de ponta a ponta — unindo interfaces fluidas em <strongTech>Next.js</strongTech> a backends estruturados em <strongTech>NestJS</strongTech>, bancos relacionais e deploy em produção.",
+    "viewProjects": "Ver projetos",
+    "getInTouch": "Entrar em contato",
+    "connect": "Conectar:",
+    "imageAlt": "Cristofe Albuquerque - Desenvolvedor Full Stack"
+  },
+  "about": {
+    "tag": "Sobre mim",
+    "title": "Engenharia de software com foco em arquitetura, segurança e produção real.",
+    "p1": "Tenho como base o desenvolvimento frontend, construindo interfaces rápidas, responsivas e refinadas com Next.js, React e TypeScript.",
+    "p2": "Expandindo essa experiência para o ecossistema full stack, desenvolvo APIs estruturadas em NestJS, modelo bancos de dados no PostgreSQL e gerencio deploys com Docker em servidores Linux e Cloud.",
+    "p3": "Busco sempre código limpo, contratos de dados bem definidos com Zod e uma arquitetura desacoplada que facilite a manutenção no dia a dia.",
+    "viewStack": "Ver stack técnica",
+    "viewProjects": "Ver projetos em destaque",
+    "cardTag": "Engenharia & Padrões",
+    "cardTitle": "Como eu construo aplicações",
+    "cardBadge": "Produção",
+    "principles": {
+      "p1": {
+        "title": "Arquitetura BFF e Frontend Moderno",
+        "desc": "Next.js App Router integrado a APIs corporativas com renderização híbrida e rotas seguras."
+      },
+      "p2": {
+        "title": "Autenticação e Segurança",
+        "desc": "Controle de acesso granular com RBAC, cookies HttpOnly seguros e proteção de dados de ponta a ponta."
+      },
+      "p3": {
+        "title": "Tipagem e Validação Rigorosa",
+        "desc": "TypeScript estrito no frontend e backend, com validação de schemas em tempo real via Zod."
+      },
+      "p4": {
+        "title": "Containers e Servidores",
+        "desc": "Ambientes isolados com Docker Compose, proxy reverso Caddy e streaming de vídeo otimizado."
+      }
+    }
+  },
+  "stack": {
+    "tag": "Stack & Tecnologias",
+    "title": "Tecnologias que utilizo no dia a dia",
+    "desc": "Ferramentas e tecnologias nas quais possuo domínio prático para criar aplicações resilientes, rápidas e seguras da interface ao deploy.",
+    "categories": {
+      "frontend": "Frontend & UI/UX",
+      "backend": "Backend & APIs",
+      "database": "Banco de Dados",
+      "devops": "DevOps & Infraestrutura"
+    },
+    "items": {
+      "frontend": [
+        "Next.js (App Router & Turbopack)",
+        "React 19 & TypeScript Estrito",
+        "Zustand (Stores Atômicas)",
+        "React Hook Form + Zod",
+        "Tailwind CSS & SCSS Modules"
+      ],
+      "backend": [
+        "NestJS (Modules, Guards, Pipes)",
+        "Node.js (ES Modules)",
+        "Autenticação RBAC & HttpOnly",
+        "Streaming 206 Partial Content",
+        "Testes E2E & Vitest"
+      ],
+      "database": [
+        "PostgreSQL Relacional",
+        "Prisma ORM (Schema & Migrations)",
+        "Enums Nativos & Constraints",
+        "Índices Compostos & Integridade",
+        "Otimização de Queries"
+      ],
+      "devops": [
+        "Docker & Docker Compose",
+        "Caddy Server 2 (Reverse Proxy)",
+        "Oracle Cloud Infrastructure (OCI)",
+        "Cloudflare (WAF & SSL Strict)",
+        "Linux / Ubuntu Server & systemd"
+      ]
+    }
+  },
+  "projects": {
+    "tag": "Projetos & Código",
+    "title": "Aplicações e Projetos em Destaque",
+    "desc": "Aplicações completas desenvolvidas de ponta a ponta — da modelagem relacional e APIs corporativas a interfaces fluidas e modernas.",
+    "highlightsLabel": "Principais Recursos:",
+    "viewRepo": "Ver repositório no GitHub",
+    "items": {
+      "lmsFront": {
+        "title": "LMS — Frontend Next.js",
+        "category": "Frontend & BFF",
+        "status": "Em desenvolvimento",
+        "description": "Plataforma educacional desenvolvida com Next.js App Router e arquitetura BFF. Focada em segurança de ponta a ponta, reprodução eficiente de mídia sob demanda e uma experiência de usuário fluida e responsiva.",
+        "h1": "Player de vídeo com suporte a HTTP Range Requests (206 Partial Content)",
+        "h2": "Autenticação via cookies HttpOnly com SameSite e middleware no edge",
+        "h3": "Arquitetura BFF com validação rígida em tempo real via Zod + React Hook Form",
+        "h4": "Estado atômico com Zustand e estilização modular em SCSS Modules"
+      },
+      "lmsNest": {
+        "title": "LMS — Backend NestJS",
+        "category": "Backend & API",
+        "status": "Em desenvolvimento",
+        "description": "API corporativa escalável desenvolvida em NestJS e PostgreSQL, com foco em streaming seguro de alta performance, arquitetura orientada a domínios e segurança avançada.",
+        "h1": "Streaming sob demanda (HTTP 206) protegido e servido diretamente pelo Caddy via X-Accel-Redirect",
+        "h2": "Controle de acesso RBAC, sessões seguras em cookies __Secure-sid e hashing Argon2id + Salt + Pepper",
+        "h3": "Testes automatizados com Vitest e modelagem relacional no PostgreSQL com Prisma ORM",
+        "h4": "Orquestração com Docker Compose, healthchecks, redes isoladas e builds multi-stage otimizados"
+      },
+      "lmsExpress": {
+        "title": "LMS — API Express",
+        "category": "Backend & API",
+        "status": "Base arquitetural",
+        "description": "Primeira versão da API da plataforma desenvolvida em Express e TypeScript. Serviu como base de validação para a posterior migração estruturada para o ecossistema NestJS.",
+        "h1": "API RESTful com rotas tipadas em TypeScript e JWT",
+        "h2": "Modelagem e consultas relacionais no PostgreSQL sem ORM",
+        "h3": "Base de estudo que direcionou as decisões de arquitetura no NestJS"
+      }
+    }
+  },
+  "contact": {
+    "tag": "Contato & Conexões",
+    "title": "Vamos conversar sobre o seu próximo projeto?",
+    "desc": "Estou aberto a oportunidades como Desenvolvedor Full Stack ou Frontend, além de projetos freelance e novos desafios."
+  },
+  "footer": {
+    "rights": "Cristofe Albuquerque. Todos os direitos reservados."
+  }
+}

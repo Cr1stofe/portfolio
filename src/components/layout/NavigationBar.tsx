@@ -1,16 +1,21 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
+
 interface NavigationProps {
     direction?: 'row' | 'col'
     onItemClick?: () => void
 }
 
 export function NavigationBar({ direction = 'row', onItemClick }: NavigationProps) {
+    const t = useTranslations('nav')
     const isCol = direction === 'col'
 
     const navLinks = [
-        { label: 'Sobre', href: '#about', index: '01' },
-        { label: 'Stack', href: '#skills', index: '02' },
-        { label: 'Projetos', href: '#projects', index: '03' },
-        { label: 'Contato', href: '#contact', index: '04' },
+        { label: t('about'), href: '#about', index: '01' },
+        { label: t('skills'), href: '#skills', index: '02' },
+        { label: t('projects'), href: '#projects', index: '03' },
+        { label: t('contact'), href: '#contact', index: '04' },
     ]
 
     return (

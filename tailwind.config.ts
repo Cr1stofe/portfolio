@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss';
+
+const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,18 +13,16 @@ module.exports = {
         alt: 'var(--font-ibm), monospace',
       },
       colors: {
-        /* Paleta azul original — usada como cor de identidade */
         ocean: {
           50:  '#eef4f9',
           100: '#d5e5f1',
           200: '#9fc5de',
           400: '#2b6389',
           500: '#1a4f72',
-          600: '#113657',   /* ocean-blue-300 original */
-          700: '#0d2941',   /* ocean-blue-700 original */
-          900: '#06131e',   /* ocean-blue-900 original */
+          600: '#113657',
+          700: '#0d2941',
+          900: '#06131e',
         },
-        /* Azul claro para acentos secundários */
         brand: {
           50:  '#f0f7ff',
           100: '#dbeeff',
@@ -44,4 +43,6 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
+
+export default config;
