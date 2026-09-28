@@ -28,9 +28,7 @@ export default async function HomePage({
         {t('skipToContent')}
       </a>
 
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
 
       <main id="main-content">
         <Hero locale={locale} />
