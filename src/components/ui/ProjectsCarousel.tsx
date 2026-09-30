@@ -20,6 +20,8 @@ export interface ProjectItem {
   highlights: string[];
   stack: string[];
   githubUrl: string;
+  liveUrl?: string;
+  liveLabel?: string;
   featuredIcon: React.ReactNode;
   accentBg: string;
   accentBorder: string;
@@ -32,21 +34,26 @@ interface ProjectsCarouselProps {
   projects: ProjectItem[];
   highlightsLabel: string;
   viewRepo: string;
+  liveDemoLabel?: string;
 }
 
 function ProjectCard({
   project,
   highlightsLabel,
   viewRepo,
+  liveDemoLabel,
 }: {
   project: ProjectItem;
   highlightsLabel: string;
   viewRepo: string;
+  liveDemoLabel?: string;
 }) {
+  const resolvedLiveLabel = project.liveLabel || liveDemoLabel || 'Live Demo';
+
   return (
     <div
       className={cn(
-        'group relative flex h-full cursor-pointer flex-col justify-between overflow-hidden rounded-3xl border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl',
+        'group relative flex h-full flex-col justify-between overflow-hidden rounded-3xl border shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl',
         project.accentBg,
         project.accentBorder
       )}
@@ -165,23 +172,46 @@ function ProjectCard({
           ))}
         </div>
 
-        <Link
-          href={project.githubUrl}
-          target="_blank"
-          className={cn(
-            'inline-flex items-center gap-2 text-sm font-bold transition-all after:absolute after:inset-0 after:rounded-3xl',
-            project.dark
-              ? 'text-white hover:text-orange-400'
-              : 'text-slate-900 hover:text-ocean-700'
+        <div className="flex flex-wrap items-center gap-2.5">
+          {project.liveUrl && (
+            <Link
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                'inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-bold transition-all sm:text-sm',
+                project.dark
+                  ? 'bg-orange-500 text-slate-950 hover:bg-orange-400 hover:shadow-md'
+                  : 'hover:bg-ocean-800 bg-ocean-700 text-white hover:shadow-md'
+              )}
+            >
+              <span>{resolvedLiveLabel}</span>
+              <ArrowUpRight
+                size={15}
+                className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
+            </Link>
           )}
-        >
-          <FaGithub size={17} />
-          <span>{viewRepo}</span>
-          <ArrowUpRight
-            size={16}
-            className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-          />
-        </Link>
+
+          <Link
+            href={project.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              'inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all sm:text-sm',
+              project.dark
+                ? 'border border-ocean-600/70 bg-ocean-700/50 text-slate-200 hover:border-ocean-500 hover:bg-ocean-600/70 hover:text-white'
+                : 'shadow-2xs border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950'
+            )}
+          >
+            <FaGithub size={15} />
+            <span>{viewRepo}</span>
+            <ArrowUpRight
+              size={14}
+              className="opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );
@@ -191,6 +221,7 @@ export function ProjectsCarousel({
   projects,
   highlightsLabel,
   viewRepo,
+  liveDemoLabel,
 }: ProjectsCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
@@ -289,6 +320,7 @@ export function ProjectsCarousel({
                 project={project}
                 highlightsLabel={highlightsLabel}
                 viewRepo={viewRepo}
+                liveDemoLabel={liveDemoLabel}
               />
             </div>
           ))}
