@@ -67,7 +67,7 @@ function ProjectCard({
         <div className="mb-5 flex items-center justify-between">
           <div
             className={cn(
-              'rounded-xl border p-3 shadow-2xs',
+              'shadow-2xs rounded-xl border p-3',
               project.accentIcon
             )}
           >
@@ -152,7 +152,7 @@ function ProjectCard({
         className={cn(
           'border-t p-6 pt-5 sm:p-7',
           project.dark
-            ? 'border-ocean-600/60 bg-ocean-800/40'
+            ? 'bg-ocean-800/40 border-ocean-600/60'
             : 'border-slate-100 bg-slate-50/50'
         )}
       >
@@ -164,7 +164,7 @@ function ProjectCard({
                 'rounded-lg border px-2.5 py-1 text-xs font-semibold',
                 project.dark
                   ? 'border-ocean-500/60 bg-ocean-600/50 text-slate-100'
-                  : 'border-slate-200 bg-white text-slate-700 shadow-2xs'
+                  : 'shadow-2xs border-slate-200 bg-white text-slate-700'
               )}
             >
               {tItem}
@@ -182,7 +182,7 @@ function ProjectCard({
                 'inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-bold transition-all sm:text-sm',
                 project.dark
                   ? 'bg-orange-500 text-slate-950 hover:bg-orange-400 hover:shadow-md'
-                  : 'bg-ocean-700 text-white hover:bg-ocean-800 hover:shadow-md'
+                  : 'hover:bg-ocean-800 bg-ocean-700 text-white hover:shadow-md'
               )}
             >
               <span>{resolvedLiveLabel}</span>
@@ -201,7 +201,7 @@ function ProjectCard({
               'inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all sm:text-sm',
               project.dark
                 ? 'border border-ocean-600/70 bg-ocean-700/50 text-slate-200 hover:border-ocean-500 hover:bg-ocean-600/70 hover:text-white'
-                : 'border border-slate-200 bg-white text-slate-700 shadow-2xs hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950'
+                : 'shadow-2xs border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950'
             )}
           >
             <FaGithub size={15} />
