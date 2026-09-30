@@ -1,5 +1,3 @@
-type EventParams = Record<string, string | number | boolean | undefined>;
-
 export interface ProjectClickEvent {
   event: 'project_click';
   project_name: string;
@@ -28,24 +26,16 @@ export interface CtaClickEvent {
 export type AnalyticsEvent =
   ProjectClickEvent | ContactClickEvent | LanguageChangeEvent | CtaClickEvent;
 
-declare global {
-  interface Window {
-    gtag?: (
-      command: string,
-      target: string,
-      params?: Record<string, unknown>
-    ) => void;
-  }
-}
-
 export function sendAnalyticsEvent(data: AnalyticsEvent): void {
   if (typeof window === 'undefined') return;
 
   try {
-    if (typeof window.gtag === 'function') {
-      const { event, ...params } = data;
-      window.gtag('event', event, params as EventParams);
-    }
+    fetch('/api/analytics', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+      keepalive: true,
+    }).catch(() => {});
   } catch {
     // no-op
   }
