@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import { Mail, ArrowUpRight } from 'lucide-react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa6';
+import { trackContactClick } from '@/lib/analytics';
 
 interface SocialTagsProps {
   link: string;
@@ -25,6 +28,7 @@ export function SocialTag({ link, name, label, sublabel }: SocialTagsProps) {
     <Link
       href={link}
       target={name === 'email' ? '_self' : '_blank'}
+      onClick={() => trackContactClick(name, link)}
       className="group flex w-full min-w-0 items-center justify-between rounded-2xl border border-slate-200 bg-slate-50/80 p-4 transition-all duration-300 hover:border-slate-300 hover:bg-white hover:shadow-lg sm:p-5 lg:p-6"
     >
       <div className="mr-2 flex min-w-0 flex-1 items-center gap-3 sm:gap-3.5">

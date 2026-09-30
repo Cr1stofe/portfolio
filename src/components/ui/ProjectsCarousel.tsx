@@ -11,6 +11,7 @@ import {
 import { FaGithub } from 'react-icons/fa6';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { trackProjectClick } from '@/lib/analytics';
 
 export interface ProjectItem {
   title: string;
@@ -178,6 +179,13 @@ function ProjectCard({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackProjectClick(
+                  project.title,
+                  project.liveLabel ? 'api_docs' : 'live_demo',
+                  project.liveUrl!
+                )
+              }
               className={cn(
                 'inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-bold transition-all sm:text-sm',
                 project.dark
@@ -197,6 +205,9 @@ function ProjectCard({
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackProjectClick(project.title, 'github_repo', project.githubUrl)
+            }
             className={cn(
               'inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all sm:text-sm',
               project.dark

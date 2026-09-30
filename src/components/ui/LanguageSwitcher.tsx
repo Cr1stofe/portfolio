@@ -5,6 +5,7 @@ import { usePathname, useRouter } from '@/i18n/routing';
 import { useTransition } from 'react';
 
 import { cn } from '@/lib/utils';
+import { trackLanguageChange } from '@/lib/analytics';
 
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -14,6 +15,7 @@ export function LanguageSwitcher() {
 
   const toggleLocale = (nextLocale: 'en' | 'pt') => {
     if (nextLocale === locale) return;
+    trackLanguageChange(locale, nextLocale);
     startTransition(() => {
       router.replace(pathname, { locale: nextLocale });
     });
