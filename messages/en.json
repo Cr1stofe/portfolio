@@ -99,7 +99,9 @@
     "title": "Featured Applications & Projects",
     "desc": "End-to-end applications — from relational data modeling and enterprise APIs to modern, responsive interfaces.",
     "highlightsLabel": "Key Features:",
-    "viewRepo": "View repository on GitHub",
+    "viewRepo": "Repository",
+    "liveDemo": "Live Demo",
+    "apiDocs": "API Docs",
     "items": {
       "lmsFront": {
         "title": "LMS — Next.js Frontend",

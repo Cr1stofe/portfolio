@@ -99,7 +99,9 @@
     "title": "Aplicações e Projetos em Destaque",
     "desc": "Aplicações completas desenvolvidas de ponta a ponta — da modelagem relacional e APIs corporativas a interfaces fluidas e modernas.",
     "highlightsLabel": "Principais Recursos:",
-    "viewRepo": "Ver repositório no GitHub",
+    "viewRepo": "Repositório",
+    "liveDemo": "Live Demo",
+    "apiDocs": "API Docs",
     "items": {
       "lmsFront": {
         "title": "LMS — Frontend Next.js",

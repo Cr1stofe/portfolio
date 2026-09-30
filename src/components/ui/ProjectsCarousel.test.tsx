@@ -66,4 +66,29 @@ describe('ProjectsCarousel Component', () => {
     );
     expect(repoLinks[0]).toHaveAttribute('target', '_blank');
   });
+
+  it('should render live demo link when liveUrl is provided', () => {
+    const projectsWithLive: ProjectItem[] = [
+      {
+        ...mockProjects[0],
+        liveUrl: 'https://demo.example.com',
+        liveLabel: 'Ver Aplicação',
+      },
+    ];
+
+    render(
+      <ProjectsCarousel
+        projects={projectsWithLive}
+        highlightsLabel="Destaques"
+        viewRepo="Repositório"
+        liveDemoLabel="Live Demo"
+      />
+    );
+
+    const liveLink = screen.getByRole('link', { name: /ver aplicação/i });
+    expect(liveLink).toBeInTheDocument();
+    expect(liveLink).toHaveAttribute('href', 'https://demo.example.com');
+    expect(liveLink).toHaveAttribute('target', '_blank');
+    expect(liveLink).toHaveAttribute('rel', 'noopener noreferrer');
+  });
 });

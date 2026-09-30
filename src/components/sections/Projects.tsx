@@ -22,6 +22,7 @@ export async function Projects({ locale }: { locale: string }) {
       ],
       stack: ['Next.js', 'TypeScript', 'BFF', 'Zustand', 'SCSS Modules', 'Zod'],
       githubUrl: 'https://github.com/Cr1stofe/lms-front-next',
+      liveUrl: 'https://lms.cristofe.dev',
       featuredIcon: <Layers className="h-5 w-5" />,
       accentBg: 'bg-white',
       accentBorder: 'border-slate-200',
@@ -50,6 +51,8 @@ export async function Projects({ locale }: { locale: string }) {
         'Argon2id',
       ],
       githubUrl: 'https://github.com/Cr1stofe/lms-nest-postgres',
+      liveUrl: 'https://api-veltro.cr1stofe.dev/api/docs',
+      liveLabel: t('apiDocs'),
       featuredIcon: <PlayCircle className="h-5 w-5 text-orange-400" />,
       accentBg: 'bg-ocean-700',
       accentBorder: 'border-ocean-600',
@@ -125,6 +128,7 @@ export async function Projects({ locale }: { locale: string }) {
           projects={projects}
           highlightsLabel={t('highlightsLabel')}
           viewRepo={t('viewRepo')}
+          liveDemoLabel={t('liveDemo')}
         />
       </div>
     </section>
