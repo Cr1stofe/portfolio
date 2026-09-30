@@ -22,7 +22,7 @@ export async function Projects({ locale }: { locale: string }) {
       ],
       stack: ['Next.js', 'TypeScript', 'BFF', 'Zustand', 'SCSS Modules', 'Zod'],
       githubUrl: 'https://github.com/Cr1stofe/lms-front-next',
-      liveUrl: 'https://lms.cristofe.dev',
+      liveUrl: 'https://veltro.cr1stofe.dev/',
       featuredIcon: <Layers className="h-5 w-5" />,
       accentBg: 'bg-white',
       accentBorder: 'border-slate-200',
