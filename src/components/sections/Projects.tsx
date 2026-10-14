@@ -27,7 +27,7 @@ export async function Projects({ locale }: { locale: string }) {
         'Prisma',
         'Gemini API',
         'Docker',
-        'Vitest',
+        'Turborepo',
       ],
       githubUrl: 'https://github.com/Cr1stofe/tailored-cv',
       liveUrl: 'https://api-docs-tailored-cv.cr1stofe.dev/docs',
