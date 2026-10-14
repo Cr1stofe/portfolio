@@ -18,7 +18,6 @@ export async function Projects({ locale }: { locale: string }) {
         t('items.tailoredCv.h1'),
         t('items.tailoredCv.h2'),
         t('items.tailoredCv.h3'),
-        t('items.tailoredCv.h4'),
       ],
       stack: [
         'Next.js',
@@ -48,7 +47,6 @@ export async function Projects({ locale }: { locale: string }) {
         t('items.lmsFront.h1'),
         t('items.lmsFront.h2'),
         t('items.lmsFront.h3'),
-        t('items.lmsFront.h4'),
       ],
       stack: ['Next.js', 'TypeScript', 'BFF', 'Zustand', 'SCSS Modules', 'Zod'],
       githubUrl: 'https://github.com/Cr1stofe/lms-front-next',
@@ -68,7 +66,6 @@ export async function Projects({ locale }: { locale: string }) {
         t('items.lmsNest.h1'),
         t('items.lmsNest.h2'),
         t('items.lmsNest.h3'),
-        t('items.lmsNest.h4'),
       ],
       stack: [
         'NestJS',
@@ -159,6 +156,11 @@ export async function Projects({ locale }: { locale: string }) {
           highlightsLabel={t('highlightsLabel')}
           viewRepo={t('viewRepo')}
           liveDemoLabel={t('liveDemo')}
+          previousProjectLabel={t('carousel.previous')}
+          nextProjectLabel={t('carousel.next')}
+          paginationLabels={projects.map((_, index) =>
+            t('carousel.goToPage', { page: index + 1 })
+          )}
         />
       </div>
     </section>

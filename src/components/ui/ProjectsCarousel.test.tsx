@@ -19,6 +19,12 @@ const mockProjects: ProjectItem[] = [
   },
 ];
 
+const carouselLabels = {
+  previousProjectLabel: 'Projeto anterior',
+  nextProjectLabel: 'Próximo projeto',
+  paginationLabels: ['Ir para a página 1 de projetos'],
+};
+
 describe('ProjectsCarousel Component', () => {
   it('should render project titles and descriptions', () => {
     render(
@@ -26,6 +32,7 @@ describe('ProjectsCarousel Component', () => {
         projects={mockProjects}
         highlightsLabel="Destaques de Engenharia"
         viewRepo="Ver Repositório"
+        {...carouselLabels}
       />
     );
 
@@ -41,6 +48,7 @@ describe('ProjectsCarousel Component', () => {
         projects={mockProjects}
         highlightsLabel="Destaques de Engenharia"
         viewRepo="Ver Repositório"
+        {...carouselLabels}
       />
     );
 
@@ -55,6 +63,7 @@ describe('ProjectsCarousel Component', () => {
         projects={mockProjects}
         highlightsLabel="Destaques de Engenharia"
         viewRepo="Ver Repositório"
+        {...carouselLabels}
       />
     );
 
@@ -82,6 +91,7 @@ describe('ProjectsCarousel Component', () => {
         highlightsLabel="Destaques"
         viewRepo="Repositório"
         liveDemoLabel="Live Demo"
+        {...carouselLabels}
       />
     );
 
