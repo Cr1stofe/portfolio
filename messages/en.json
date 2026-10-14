@@ -23,6 +23,37 @@
     "connect": "Connect:",
     "imageAlt": "Cristofe Albuquerque - Full Stack Developer"
   },
+  "v2": {
+    "hero": {
+      "availability": "Available for new projects",
+      "eyebrow": "Full stack · architecture · production",
+      "title": "I build full-stack products ready for production",
+      "intro": "I’m <strong>Cristofe Albuquerque</strong>, a developer focused on turning complex requirements into fast, secure, and sustainable applications — from interface to deployment.",
+      "primaryCta": "Explore projects",
+      "secondaryCta": "Let’s talk",
+      "connect": "Find me online",
+      "imageAlt": "Cristofe Albuquerque - Full Stack Developer",
+      "cardLabel": "End-to-end delivery",
+      "cardItems": {
+        "frontend": "Responsive interfaces",
+        "backend": "Structured APIs",
+        "production": "Monitored deployments"
+      },
+      "statusLabel": "Working mode",
+      "statusValue": "Production-ready code"
+    },
+    "proof": {
+      "focus": {
+        "label": "Focus",
+        "value": "Digital products and internal systems"
+      },
+      "scope": {
+        "label": "Scope",
+        "value": "Frontend, backend, data, and infrastructure"
+      },
+      "approach": { "label": "Approach", "value": "Clarity before complexity" }
+    }
+  },
   "about": {
     "tag": "About me",
     "title": "Software engineering focused on architecture, security, and real-world production.",
@@ -102,42 +133,44 @@
     "viewRepo": "Repository",
     "liveDemo": "Live Demo",
     "apiDocs": "API Docs",
+    "carousel": {
+      "previous": "Previous project",
+      "next": "Next project",
+      "goToPage": "Go to project page {page}"
+    },
     "items": {
       "tailoredCv": {
         "title": "Tailored CV",
         "category": "Full Stack & AI",
         "status": "In Production",
-        "description": "Full-stack platform that analyzes job descriptions and generates ATS-optimized, personalized CVs from a professional profile without inventing experience, skills, or results.",
-        "h1": "Asynchronous AI workflows backed by persistent PostgreSQL queues, retries, and recovery after restarts",
-        "h2": "Deterministic schemas and validation to prevent hallucinated experience, technologies, companies, roles, or metrics",
-        "h3": "Secure session authentication with HttpOnly and Secure cookies, Scrypt, pepper, and sensitive-data redaction",
-        "h4": "Typed contracts, OpenAPI documentation, unit/integration/E2E tests, and production observability"
+        "description": "Production full-stack platform that turns job descriptions and a verified professional profile into personalized, ATS-ready CVs.",
+        "h1": "Durable AI jobs with PostgreSQL queues, retries, and restart recovery",
+        "h2": "Deterministic schemas that block invented experience, skills, and metrics",
+        "h3": "Secure sessions, typed contracts, automated tests, and production observability"
       },
       "lmsFront": {
         "title": "LMS — Next.js Frontend",
         "category": "Frontend & BFF",
-        "status": "In development",
-        "description": "Educational platform built with Next.js App Router and BFF architecture. Focused on end-to-end security, efficient on-demand media playback, and a fluid, responsive user experience.",
-        "h1": "HTML5 video player with HTTP Range Requests support (206 Partial Content)",
-        "h2": "HttpOnly cookie authentication with SameSite and edge middleware",
-        "h3": "BFF architecture with strict real-time schema validation via Zod + React Hook Form",
-        "h4": "Atomic state management with Zustand and modular styling with SCSS Modules"
+        "status": "In Production",
+        "description": "Educational interface built with Next.js App Router and a BFF, focused on secure authentication and efficient on-demand video.",
+        "h1": "Video player with HTTP Range Requests (206)",
+        "h2": "HttpOnly sessions protected by SameSite and edge middleware",
+        "h3": "Typed BFF contracts with Zod and React Hook Form"
       },
       "lmsNest": {
         "title": "LMS — NestJS Backend",
         "category": "Backend & API",
-        "status": "In development",
-        "description": "Scalable enterprise API built with NestJS and PostgreSQL, focused on high-performance secure streaming, domain-driven architecture, and advanced security.",
-        "h1": "On-demand streaming (HTTP 206) protected and offloaded by Caddy via X-Accel-Redirect",
-        "h2": "Granular RBAC access control, secure __Secure-sid cookie sessions, and Argon2id + Salt + Pepper hashing",
-        "h3": "Automated testing with Vitest and relational data modeling in PostgreSQL with Prisma ORM",
-        "h4": "Container orchestration with Docker Compose, health checks, isolated networks, and optimized multi-stage builds"
+        "status": "In Production",
+        "description": "NestJS and PostgreSQL API for secure, high-performance media streaming with a domain-oriented architecture.",
+        "h1": "Protected HTTP 206 streaming offloaded to Caddy via X-Accel-Redirect",
+        "h2": "Granular RBAC and secure sessions with Argon2id",
+        "h3": "Vitest coverage and containerized deployment with health checks"
       },
       "lmsExpress": {
         "title": "LMS — Express API",
         "category": "Backend & API",
         "status": "Architectural base",
-        "description": "First version of the platform API built with Express and TypeScript. Served as the validation foundation for the subsequent structured migration to the NestJS ecosystem.",
+        "description": "Express and TypeScript API that validated the platform domain before its structured migration to NestJS.",
         "h1": "RESTful API with typed TypeScript routes and JWT authentication",
         "h2": "Relational PostgreSQL data modeling and direct SQL queries without ORM",
         "h3": "Core study foundation that guided architectural decisions in NestJS"
@@ -146,7 +179,7 @@
         "title": "Personal Portfolio",
         "category": "Frontend",
         "status": "In Production",
-        "description": "Modern web application built with Next.js 16 to showcase projects and engineering experience, featuring native multilingual support and automated tests.",
+        "description": "Next.js 16 application for presenting projects and engineering experience with native multilingual support and automated tests.",
         "h1": "Static Site Generation (SSG) and native i18n (PT/EN) with next-intl",
         "h2": "Automated component and utility testing with Vitest and Testing Library",
         "h3": "Continuous integration (CI) pipeline with GitHub Actions and Schema.org SEO"

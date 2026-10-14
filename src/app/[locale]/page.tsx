@@ -1,7 +1,7 @@
 import { routing } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import { Navbar } from '@/components/layout/Navbar';
-import { Hero } from '@/components/sections/Hero';
+import { V2Hero } from '@/components/sections/V2Hero';
 import { AboutMe } from '@/components/sections/AboutMe';
 import { TechStack } from '@/components/sections/TechStack';
 import { Projects } from '@/components/sections/Projects';
@@ -31,7 +31,7 @@ export default async function HomePage({
       <Navbar />
 
       <main id="main-content">
-        <Hero locale={locale} />
+        <V2Hero locale={locale} />
         <AboutMe locale={locale} />
         <TechStack locale={locale} />
         <Projects locale={locale} />

@@ -36,6 +36,9 @@ interface ProjectsCarouselProps {
   highlightsLabel: string;
   viewRepo: string;
   liveDemoLabel?: string;
+  previousProjectLabel: string;
+  nextProjectLabel: string;
+  paginationLabels: string[];
 }
 
 function ProjectCard({
@@ -61,11 +64,11 @@ function ProjectCard({
     >
       <div
         className={cn(
-          'border-b p-6 sm:p-7',
+          'border-b p-5 sm:p-7',
           project.dark ? 'border-ocean-600/60' : 'border-slate-100'
         )}
       >
-        <div className="mb-5 flex items-center justify-between">
+        <div className="mb-4 flex items-center justify-between sm:mb-5">
           <div
             className={cn(
               'shadow-2xs rounded-xl border p-3',
@@ -117,7 +120,7 @@ function ProjectCard({
         </p>
       </div>
 
-      <div className="flex-1 p-6 sm:p-7">
+      <div className="flex-1 p-5 sm:p-7">
         <span
           className={cn(
             'mb-3 block text-xs font-bold uppercase tracking-wider',
@@ -126,7 +129,7 @@ function ProjectCard({
         >
           {highlightsLabel}
         </span>
-        <ul className="space-y-2.5">
+        <ul className="space-y-2 sm:space-y-2.5">
           {project.highlights.map((h, hi) => (
             <li
               key={hi}
@@ -151,7 +154,7 @@ function ProjectCard({
 
       <div
         className={cn(
-          'border-t p-6 pt-5 sm:p-7',
+          'border-t p-5 sm:p-7',
           project.dark
             ? 'bg-ocean-800/40 border-ocean-600/60'
             : 'border-slate-100 bg-slate-50/50'
@@ -233,6 +236,9 @@ export function ProjectsCarousel({
   highlightsLabel,
   viewRepo,
   liveDemoLabel,
+  previousProjectLabel,
+  nextProjectLabel,
+  paginationLabels,
 }: ProjectsCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
@@ -296,7 +302,7 @@ export function ProjectsCarousel({
                 ? 'shadow-xs border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50'
                 : 'cursor-not-allowed border-slate-200 bg-slate-100/70 text-slate-400 opacity-60'
             )}
-            aria-label="Projeto anterior"
+            aria-label={previousProjectLabel}
           >
             <ChevronLeft size={18} />
           </button>
@@ -310,7 +316,7 @@ export function ProjectsCarousel({
                 ? 'shadow-xs border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50'
                 : 'cursor-not-allowed border-slate-200 bg-slate-100/70 text-slate-400 opacity-60'
             )}
-            aria-label="Próximo projeto"
+            aria-label={nextProjectLabel}
           >
             <ChevronRight size={18} />
           </button>
@@ -351,7 +357,7 @@ export function ProjectsCarousel({
                   ? 'h-2 w-7 bg-ocean-700'
                   : 'h-2 w-2 bg-slate-300 hover:bg-slate-400'
               )}
-              aria-label={`Ir para a página ${index + 1} de projetos`}
+              aria-label={paginationLabels[index]}
             />
           ))}
         </div>
