@@ -103,6 +103,16 @@
     "liveDemo": "Live Demo",
     "apiDocs": "API Docs",
     "items": {
+      "tailoredCv": {
+        "title": "Tailored CV",
+        "category": "Full Stack & AI",
+        "status": "In Production",
+        "description": "Full-stack platform that analyzes job descriptions and generates ATS-optimized, personalized CVs from a professional profile without inventing experience, skills, or results.",
+        "h1": "Asynchronous AI workflows backed by persistent PostgreSQL queues, retries, and recovery after restarts",
+        "h2": "Deterministic schemas and validation to prevent hallucinated experience, technologies, companies, roles, or metrics",
+        "h3": "Secure session authentication with HttpOnly and Secure cookies, Scrypt, pepper, and sensitive-data redaction",
+        "h4": "Typed contracts, OpenAPI documentation, unit/integration/E2E tests, and production observability"
+      },
       "lmsFront": {
         "title": "LMS — Next.js Frontend",
         "category": "Frontend & BFF",

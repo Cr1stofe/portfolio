@@ -103,6 +103,16 @@
     "liveDemo": "Live Demo",
     "apiDocs": "API Docs",
     "items": {
+      "tailoredCv": {
+        "title": "Tailored CV",
+        "category": "Full Stack & IA",
+        "status": "Em Produção",
+        "description": "Plataforma full-stack que analisa vagas e gera currículos personalizados e otimizados para ATS a partir de um perfil profissional, sem inventar experiências, tecnologias ou resultados.",
+        "h1": "Fluxos assíncronos de IA com filas persistidas no PostgreSQL, retentativas e recuperação após reinicializações",
+        "h2": "Schemas e validações determinísticas para impedir experiências, tecnologias, empresas, cargos ou métricas inventadas",
+        "h3": "Autenticação segura por sessão com cookies HttpOnly e Secure, Scrypt, pepper e redação de dados sensíveis",
+        "h4": "Contratos tipados, documentação OpenAPI, testes unitários/integração/E2E e observabilidade em produção"
+      },
       "lmsFront": {
         "title": "LMS — Frontend Next.js",
         "category": "Frontend & BFF",

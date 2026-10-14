@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { PlayCircle, Layers, Server, Code2 } from 'lucide-react';
+import { PlayCircle, Layers, Server, Code2, Sparkles } from 'lucide-react';
 import {
   ProjectsCarousel,
   type ProjectItem,
@@ -9,6 +9,36 @@ export async function Projects({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: 'projects' });
 
   const projects: ProjectItem[] = [
+    {
+      title: t('items.tailoredCv.title'),
+      category: t('items.tailoredCv.category'),
+      status: t('items.tailoredCv.status'),
+      description: t('items.tailoredCv.description'),
+      highlights: [
+        t('items.tailoredCv.h1'),
+        t('items.tailoredCv.h2'),
+        t('items.tailoredCv.h3'),
+        t('items.tailoredCv.h4'),
+      ],
+      stack: [
+        'Next.js',
+        'NestJS',
+        'PostgreSQL',
+        'Prisma',
+        'Gemini API',
+        'Docker',
+        'Vitest',
+      ],
+      githubUrl: 'https://github.com/Cr1stofe/tailored-cv',
+      liveUrl: 'https://api-docs-tailored-cv.cr1stofe.dev/docs',
+      liveLabel: t('apiDocs'),
+      featuredIcon: <Sparkles className="h-5 w-5 text-orange-400" />,
+      accentBg: 'bg-ocean-700',
+      accentBorder: 'border-ocean-600',
+      accentIcon: 'bg-ocean-600/80 border-ocean-500 text-white',
+      accentHover: 'group-hover:text-white',
+      dark: true,
+    },
     {
       title: t('items.lmsFront.title'),
       category: t('items.lmsFront.category'),
