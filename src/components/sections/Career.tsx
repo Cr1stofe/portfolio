@@ -51,14 +51,12 @@ export async function Career({ locale }: { locale: string }) {
               {t('background.desc')}
             </p>
             <ul className="space-y-2 text-sm leading-relaxed text-slate-600">
-              {(t.raw('background.bullets') as string[])
-                .slice(0, 2)
-                .map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange-500" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
+              {(t.raw('background.bullets') as string[]).map((bullet) => (
+                <li key={bullet} className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange-500" />
+                  <span>{bullet}</span>
+                </li>
+              ))}
             </ul>
           </article>
 
@@ -80,7 +78,8 @@ export async function Career({ locale }: { locale: string }) {
                 <p className="mt-0.5 text-xs leading-snug text-slate-400">
                   {t('outcomes.ranking.context')} ·{' '}
                   {t('outcomes.rankingScore.value')}{' '}
-                  {t('outcomes.rankingScore.label')}
+                  {t('outcomes.rankingScore.label')} (
+                  {t('outcomes.rankingScore.context')})
                 </p>
               </div>
               <div className="border-t border-slate-100 pt-5">
@@ -93,7 +92,8 @@ export async function Career({ locale }: { locale: string }) {
                 <p className="mt-0.5 text-xs leading-snug text-slate-400">
                   {t('outcomes.motul.context')} ·{' '}
                   {t('outcomes.motulStability.value')}{' '}
-                  {t('outcomes.motulStability.label')}
+                  {t('outcomes.motulStability.label')} (
+                  {t('outcomes.motulStability.context')})
                 </p>
               </div>
             </div>

@@ -1,7 +1,10 @@
+export type ProjectLinkType =
+  'live_demo' | 'api_docs' | 'github_repo' | 'website' | 'app_store';
+
 export interface ProjectClickEvent {
   event: 'project_click';
   project_name: string;
-  link_type: 'live_demo' | 'api_docs' | 'github_repo';
+  link_type: ProjectLinkType;
   destination_url: string;
 }
 
@@ -53,7 +56,7 @@ export function sendAnalyticsEvent(data: AnalyticsEvent): void {
 
 export function trackProjectClick(
   projectName: string,
-  linkType: 'live_demo' | 'api_docs' | 'github_repo',
+  linkType: ProjectLinkType,
   destinationUrl: string
 ): void {
   sendAnalyticsEvent({

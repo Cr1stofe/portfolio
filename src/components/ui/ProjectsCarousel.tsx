@@ -11,7 +11,7 @@ import {
 import { FaGithub } from 'react-icons/fa6';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { trackProjectClick } from '@/lib/analytics';
+import { trackProjectClick, type ProjectLinkType } from '@/lib/analytics';
 
 export interface ProjectItem {
   title: string;
@@ -23,8 +23,10 @@ export interface ProjectItem {
   githubUrl?: string;
   liveUrl?: string;
   liveLabel?: string;
+  liveLinkType?: ProjectLinkType;
   secondaryUrl?: string;
   secondaryLabel?: string;
+  secondaryLinkType?: ProjectLinkType;
   featuredIcon: React.ReactNode;
   accentBg: string;
   accentBorder: string;
@@ -187,7 +189,7 @@ function ProjectCard({
               onClick={() =>
                 trackProjectClick(
                   project.title,
-                  project.liveLabel ? 'api_docs' : 'live_demo',
+                  project.liveLinkType ?? 'live_demo',
                   project.liveUrl!
                 )
               }
@@ -242,7 +244,7 @@ function ProjectCard({
               onClick={() =>
                 trackProjectClick(
                   project.title,
-                  'api_docs',
+                  project.secondaryLinkType ?? 'api_docs',
                   project.secondaryUrl!
                 )
               }
