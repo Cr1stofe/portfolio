@@ -1,8 +1,9 @@
 import { routing } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
 import { Navbar } from '@/components/layout/Navbar';
-import { V2Hero } from '@/components/sections/V2Hero';
+import { Hero } from '@/components/sections/Hero';
 import { AboutMe } from '@/components/sections/AboutMe';
+import { Career } from '@/components/sections/Career';
 import { TechStack } from '@/components/sections/TechStack';
 import { Projects } from '@/components/sections/Projects';
 import { Contact } from '@/components/sections/Contact';
@@ -31,8 +32,9 @@ export default async function HomePage({
       <Navbar />
 
       <main id="main-content">
-        <V2Hero locale={locale} />
+        <Hero locale={locale} />
         <AboutMe locale={locale} />
+        <Career locale={locale} />
         <TechStack locale={locale} />
         <Projects locale={locale} />
         <Contact locale={locale} />

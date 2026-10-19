@@ -5,6 +5,7 @@
   },
   "nav": {
     "about": "Sobre",
+    "career": "Trajetória",
     "skills": "Stack",
     "projects": "Projetos",
     "contact": "Contato",
@@ -15,7 +16,7 @@
     "skipToContent": "Pular para o conteúdo principal"
   },
   "hero": {
-    "badge": "Disponível para novos projetos",
+    "badge": "Aberto a oportunidades remotas",
     "title": "Desenvolvedor Full Stack focado em criar aplicações modernas e escaláveis",
     "intro": "Olá, sou o <strongName>Cristofe Albuquerque</strongName>. Desenvolvo soluções de ponta a ponta — unindo interfaces fluidas em <strongTech>Next.js</strongTech> a backends estruturados em <strongTech>NestJS</strongTech>, bancos relacionais e deploy em produção.",
     "viewProjects": "Ver projetos",
@@ -25,12 +26,13 @@
   },
   "v2": {
     "hero": {
-      "availability": "Disponível para novos projetos",
+      "availability": "Aberto a oportunidades remotas",
       "eyebrow": "Full stack · arquitetura · produção",
-      "title": "Construo produtos full stack prontos para produção",
-      "intro": "Sou <strong>Cristofe Albuquerque</strong>, desenvolvedor focado em transformar requisitos complexos em aplicações rápidas, seguras e sustentáveis — da interface ao deploy.",
+      "title": "Desenvolvedor full stack. Base em frontend",
+      "intro": "Sou <strong>Cristofe Albuquerque</strong>, desenvolvedor com base em frontend que cria aplicações rápidas, seguras e sustentáveis — da interface ao deploy.",
       "primaryCta": "Explorar projetos",
       "secondaryCta": "Vamos conversar",
+      "resumeCta": "Baixar CV",
       "connect": "Encontre-me em",
       "imageAlt": "Cristofe Albuquerque - Desenvolvedor Full Stack",
       "cardLabel": "Entrega ponta a ponta",
@@ -61,7 +63,7 @@
     "tag": "Sobre mim",
     "title": "Engenharia de software com foco em arquitetura, segurança e produção real.",
     "p1": "Tenho como base o desenvolvimento frontend, construindo interfaces rápidas, responsivas e refinadas com Next.js, React e TypeScript.",
-    "p2": "Expandindo essa experiência para o ecossistema full stack, desenvolvo APIs estruturadas em NestJS, modelo bancos de dados no PostgreSQL e gerencio deploys com Docker em servidores Linux e Cloud.",
+    "p2": "A partir dessa base, atuo em toda a stack: desenvolvo APIs estruturadas em NestJS, modelo bancos de dados no PostgreSQL e gerencio deploys com Docker em servidores Linux e cloud.",
     "p3": "Busco sempre código limpo, contratos de dados bem definidos com Zod e uma arquitetura desacoplada que facilite a manutenção no dia a dia.",
     "viewStack": "Ver stack técnica",
     "viewProjects": "Ver projetos em destaque",
@@ -70,8 +72,8 @@
     "cardBadge": "Produção",
     "principles": {
       "p1": {
-        "title": "Arquitetura BFF e Frontend Moderno",
-        "desc": "Next.js App Router integrado a APIs corporativas com renderização híbrida e rotas seguras."
+        "title": "Frontend Moderno e Integração com APIs",
+        "desc": "Interfaces rápidas em Next.js conectadas a APIs por rotas seguras e componentes reutilizáveis."
       },
       "p2": {
         "title": "Autenticação e Segurança",
@@ -82,15 +84,66 @@
         "desc": "TypeScript estrito no frontend e backend, com validação de schemas em tempo real via Zod."
       },
       "p4": {
-        "title": "Containers e Servidores",
-        "desc": "Ambientes isolados com Docker Compose, proxy reverso Caddy e streaming de vídeo otimizado."
+        "title": "Deploy e Performance",
+        "desc": "Implantações confiáveis com Docker, servidores Linux e entrega eficiente de mídia."
       }
+    }
+  },
+  "career": {
+    "tag": "Trajetória",
+    "title": "Base em frontend, entrega full stack",
+    "desc": "Minha trajetória combina experiência profissional em desenvolvimento de software com projetos independentes focados em resolver problemas reais e funcionar em produção.",
+    "background": {
+      "title": "Olivas Digital",
+      "meta": "Desenvolvedor Frontend · Jul 2023 — Presente · Remoto",
+      "desc": "Construção de aplicações web e mobile modernas com React, Next.js, TypeScript, Flutter e APIs REST.",
+      "bullets": [
+        "Entregas de frontend em plataformas web públicas e produtos mobile usados em produção.",
+        "Performance, arquitetura e integração com APIs: React, Next.js, Flutter e REST.",
+        "Ciclo completo remoto — da análise de requisitos à entrega de experiências estáveis ao usuário."
+      ]
+    },
+    "location": {
+      "title": "Localização",
+      "desc": "Fortaleza, Brasil · UTC−3"
+    },
+    "outcomes": {
+      "title": "Resultados selecionados",
+      "ranking": {
+        "value": "1,4 s",
+        "label": "LCP em dados reais",
+        "context": "Ranking dos Políticos · performance frontend"
+      },
+      "rankingScore": {
+        "value": "99",
+        "label": "Performance no Lighthouse",
+        "context": "Ranking dos Políticos · nota desktop"
+      },
+      "motul": {
+        "value": "100 mil+",
+        "label": "downloads no Google Play",
+        "context": "Motul Expert · produto mobile"
+      },
+      "motulStability": {
+        "value": "0%",
+        "label": "taxa de crashes percebidos",
+        "context": "Motul Expert · período medido de 28 dias"
+      }
+    },
+    "education": {
+      "title": "Formação e idiomas",
+      "education": "UNINTER · concluído em jul. 2026",
+      "languages": "Inglês · intermediário"
+    },
+    "focus": {
+      "label": "Foco atual",
+      "value": "Produtos digitais e sistemas internos confiáveis"
     }
   },
   "stack": {
     "tag": "Stack & Tecnologias",
-    "title": "Tecnologias que utilizo no dia a dia",
-    "desc": "Ferramentas e tecnologias nas quais possuo domínio prático para criar aplicações resilientes, rápidas e seguras da interface ao deploy.",
+    "title": "Ferramentas e tecnologias que uso",
+    "desc": "Ferramentas e tecnologias com as quais tenho experiência prática para criar aplicações resilientes, rápidas e seguras da interface ao deploy.",
     "categories": {
       "frontend": "Frontend & UI/UX",
       "backend": "Backend & APIs",
@@ -131,11 +184,14 @@
   "projects": {
     "tag": "Projetos & Código",
     "title": "Aplicações e Projetos em Destaque",
-    "desc": "Aplicações completas desenvolvidas de ponta a ponta — da modelagem relacional e APIs corporativas a interfaces fluidas e modernas.",
-    "highlightsLabel": "Principais Recursos:",
+    "desc": "Trabalhos selecionados entre produtos profissionais e projetos independentes — de sistemas backend e modelagem de dados a interfaces modernas e responsivas.",
+    "highlightsLabel": "Destaques:",
     "viewRepo": "Repositório",
     "liveDemo": "Live Demo",
     "apiDocs": "API Docs",
+    "viewSite": "Ver site",
+    "googlePlay": "Google Play",
+    "viewProduct": "Ver produto",
     "carousel": {
       "previous": "Projeto anterior",
       "next": "Próximo projeto",
@@ -145,38 +201,47 @@
       "tailoredCv": {
         "title": "Tailored CV",
         "category": "Full Stack & IA",
-        "status": "Em Produção",
-        "description": "Plataforma full-stack em produção que transforma vagas e um perfil profissional validado em currículos personalizados e otimizados para ATS.",
+        "status": "Ferramenta pessoal",
+        "description": "Plataforma full-stack pessoal que transforma vagas e um perfil profissional validado em currículos personalizados e otimizados para ATS.",
         "h1": "Tarefas de IA resilientes com filas no PostgreSQL, retentativas e recuperação",
         "h2": "Schemas determinísticos que impedem experiências, habilidades e métricas inventadas",
         "h3": "Sessões seguras, contratos tipados, testes automatizados e observabilidade"
       },
       "lmsFront": {
-        "title": "LMS — Frontend Next.js",
+        "title": "Veltro LMS — Aplicação Web",
         "category": "Frontend & BFF",
         "status": "Em Produção",
-        "description": "Interface educacional em Next.js App Router e BFF, focada em autenticação segura e reprodução eficiente de vídeo sob demanda.",
-        "h1": "Player de vídeo com HTTP Range Requests (206)",
-        "h2": "Sessões HttpOnly protegidas por SameSite e middleware no edge",
-        "h3": "Contratos tipados no BFF com Zod e React Hook Form"
+        "description": "Interface de ensino em Next.js focada em autenticação segura e vídeo sob demanda sem baixar o arquivo inteiro.",
+        "h1": "Experiência responsiva de cursos com reprodução protegida de vídeo",
+        "h2": "Sessões HttpOnly seguras e navegação conforme o papel do usuário",
+        "h3": "Formulários e contratos de API tipados com Zod"
       },
       "lmsNest": {
-        "title": "LMS — Backend NestJS",
+        "title": "Veltro LMS — API NestJS",
         "category": "Backend & API",
         "status": "Em Produção",
-        "description": "API em NestJS e PostgreSQL para streaming de mídia seguro e performático, com arquitetura orientada a domínios.",
-        "h1": "Streaming HTTP 206 protegido e transferido ao Caddy via X-Accel-Redirect",
-        "h2": "RBAC granular e sessões seguras com Argon2id",
-        "h3": "Cobertura com Vitest e implantação em containers com health checks"
+        "description": "API em NestJS e PostgreSQL responsável por autenticação, controle de acesso, dados dos cursos e entrega segura de mídia.",
+        "h1": "Vídeos entregues em partes para reprodução mais rápida e menor carga no servidor",
+        "h2": "Controle de acesso por papéis e sessões seguras com Argon2id",
+        "h3": "Testes automatizados e implantação em containers com health checks"
       },
-      "lmsExpress": {
-        "title": "LMS — API Express",
-        "category": "Backend & API",
-        "status": "Base arquitetural",
-        "description": "API em Express e TypeScript que validou o domínio da plataforma antes da migração estruturada para NestJS.",
-        "h1": "API RESTful com rotas tipadas em TypeScript e JWT",
-        "h2": "Modelagem e consultas relacionais no PostgreSQL sem ORM",
-        "h3": "Base de estudo que direcionou as decisões de arquitetura no NestJS"
+      "ranking": {
+        "title": "Ranking dos Políticos",
+        "category": "Profissional · Frontend",
+        "status": "Em Produção",
+        "description": "Plataforma pública de alta performance que avalia parlamentares brasileiros, construída para tráfego real e acesso rápido à informação.",
+        "h1": "LCP de 1,4 s em dados reais do Core Web Vitals",
+        "h2": "Nota 99 de Performance no Lighthouse desktop",
+        "h3": "Componentes React reutilizáveis e arquitetura escalável em Next.js"
+      },
+      "motul": {
+        "title": "Motul Expert",
+        "category": "Profissional · Mobile",
+        "status": "Em Produção",
+        "description": "Aplicativo mobile oficial para consulta técnica e recomendação de lubrificantes, utilizado por uma audiência global.",
+        "h1": "Mais de 100 mil downloads no Google Play",
+        "h2": "Taxa de 0% de crashes percebidos pelo usuário em um período medido de 28 dias",
+        "h3": "Reestruturação de arquitetura e performance com Flutter"
       },
       "portfolio": {
         "title": "Portfólio Pessoal",
@@ -191,8 +256,8 @@
   },
   "contact": {
     "tag": "Contato & Conexões",
-    "title": "Vamos conversar sobre o seu próximo projeto?",
-    "desc": "Estou aberto a oportunidades como Desenvolvedor Full Stack ou Frontend, além de projetos freelance e novos desafios."
+    "title": "Aberto ao próximo desafio técnico",
+    "desc": "Estou aberto a oportunidades remotas como Desenvolvedor Full Stack ou Frontend. Também considero projetos freelance pontuais e novos desafios técnicos."
   },
   "footer": {
     "rights": "Cristofe Albuquerque. Todos os direitos reservados."

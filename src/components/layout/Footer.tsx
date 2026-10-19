@@ -16,7 +16,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="flex w-full flex-col items-center justify-between gap-6 border-t border-slate-200 pt-10 md:flex-row">
+    <footer className="flex w-full flex-col items-center justify-between gap-6 border-t border-slate-200 pt-10 lg:flex-row">
       <a
         href="#"
         onClick={scrollToTop}
@@ -32,9 +32,11 @@ export function Footer() {
         />
       </a>
 
-      <NavigationBar direction="row" />
+      <div className="hidden lg:block">
+        <NavigationBar direction="row" />
+      </div>
 
-      <p className="text-sm font-medium text-slate-500">
+      <p className="text-center text-sm font-medium text-slate-500 lg:text-left">
         © {currentYear} {tFooter('rights')}
       </p>
     </footer>

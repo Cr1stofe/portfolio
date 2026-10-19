@@ -20,9 +20,11 @@ export interface ProjectItem {
   description: string;
   highlights: string[];
   stack: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   liveLabel?: string;
+  secondaryUrl?: string;
+  secondaryLabel?: string;
   featuredIcon: React.ReactNode;
   accentBg: string;
   accentBorder: string;
@@ -160,7 +162,7 @@ function ProjectCard({
             : 'border-slate-100 bg-slate-50/50'
         )}
       >
-        <div className="mb-6 flex flex-wrap gap-2">
+        <div className="mb-5 flex flex-wrap gap-2">
           {project.stack.map((tItem, ti) => (
             <span
               key={ti}
@@ -204,27 +206,57 @@ function ProjectCard({
             </Link>
           )}
 
-          <Link
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() =>
-              trackProjectClick(project.title, 'github_repo', project.githubUrl)
-            }
-            className={cn(
-              'inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all sm:text-sm',
-              project.dark
-                ? 'border border-ocean-600/70 bg-ocean-700/50 text-slate-200 hover:border-ocean-500 hover:bg-ocean-600/70 hover:text-white'
-                : 'shadow-2xs border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950'
-            )}
-          >
-            <FaGithub size={15} />
-            <span>{viewRepo}</span>
-            <ArrowUpRight
-              size={14}
-              className="opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
-            />
-          </Link>
+          {project.githubUrl && (
+            <Link
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                trackProjectClick(
+                  project.title,
+                  'github_repo',
+                  project.githubUrl!
+                )
+              }
+              className={cn(
+                'inline-flex items-center gap-2 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all sm:text-sm',
+                project.dark
+                  ? 'border border-ocean-600/70 bg-ocean-700/50 text-slate-200 hover:border-ocean-500 hover:bg-ocean-600/70 hover:text-white'
+                  : 'shadow-2xs border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950'
+              )}
+            >
+              <FaGithub size={15} />
+              <span>{viewRepo}</span>
+              <ArrowUpRight
+                size={14}
+                className="opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
+              />
+            </Link>
+          )}
+
+          {project.secondaryUrl && (
+            <Link
+              href={project.secondaryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() =>
+                trackProjectClick(
+                  project.title,
+                  'api_docs',
+                  project.secondaryUrl!
+                )
+              }
+              className={cn(
+                'inline-flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs font-semibold transition-all sm:text-sm',
+                project.dark
+                  ? 'border border-ocean-600/70 bg-ocean-700/50 text-slate-200 hover:border-ocean-500 hover:bg-ocean-600/70 hover:text-white'
+                  : 'shadow-2xs border border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50 hover:text-slate-950'
+              )}
+            >
+              <span>{project.secondaryLabel}</span>
+              <ArrowUpRight size={14} className="opacity-70" />
+            </Link>
+          )}
         </div>
       </div>
     </div>
@@ -242,8 +274,8 @@ export function ProjectsCarousel({
 }: ProjectsCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
-    containScroll: 'trimSnaps',
-    dragFree: false,
+    loop: false,
+    skipSnaps: false,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -296,13 +328,13 @@ export function ProjectsCarousel({
             type="button"
             onClick={scrollPrev}
             disabled={!canScrollPrev}
+            aria-label={previousProjectLabel}
             className={cn(
               'flex h-10 w-10 items-center justify-center rounded-xl border transition-all',
               canScrollPrev
                 ? 'shadow-xs border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50'
                 : 'cursor-not-allowed border-slate-200 bg-slate-100/70 text-slate-400 opacity-60'
             )}
-            aria-label={previousProjectLabel}
           >
             <ChevronLeft size={18} />
           </button>
@@ -310,13 +342,13 @@ export function ProjectsCarousel({
             type="button"
             onClick={scrollNext}
             disabled={!canScrollNext}
+            aria-label={nextProjectLabel}
             className={cn(
               'flex h-10 w-10 items-center justify-center rounded-xl border transition-all',
               canScrollNext
                 ? 'shadow-xs border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50'
                 : 'cursor-not-allowed border-slate-200 bg-slate-100/70 text-slate-400 opacity-60'
             )}
-            aria-label={nextProjectLabel}
           >
             <ChevronRight size={18} />
           </button>
@@ -324,7 +356,7 @@ export function ProjectsCarousel({
       )}
 
       <div
-        className="-mx-6 -my-3 overflow-hidden px-6 py-6 sm:-mx-12 sm:px-12"
+        className="-mx-6 -my-3 overflow-hidden px-6 py-3 sm:-mx-12 sm:px-12"
         ref={emblaRef}
       >
         <div className="flex gap-4 sm:gap-6">
@@ -345,19 +377,19 @@ export function ProjectsCarousel({
       </div>
 
       {hasMultipleSnaps && (
-        <div className="flex items-center justify-center gap-2 pt-6">
+        <div className="mt-6 flex items-center justify-center gap-2">
           {scrollSnaps.map((_, index) => (
             <button
               key={index}
               type="button"
               onClick={() => scrollTo(index)}
+              aria-label={paginationLabels[index]}
               className={cn(
                 'rounded-full transition-all duration-300',
                 index === selectedIndex
                   ? 'h-2 w-7 bg-ocean-700'
                   : 'h-2 w-2 bg-slate-300 hover:bg-slate-400'
               )}
-              aria-label={paginationLabels[index]}
             />
           ))}
         </div>

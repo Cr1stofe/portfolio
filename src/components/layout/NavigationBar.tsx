@@ -17,9 +17,10 @@ export function NavigationBar({
 
   const navLinks = [
     { label: t('about'), href: '#about', index: '01' },
-    { label: t('skills'), href: '#skills', index: '02' },
-    { label: t('projects'), href: '#projects', index: '03' },
-    { label: t('contact'), href: '#contact', index: '04' },
+    { label: t('career'), href: '#career', index: '02' },
+    { label: t('skills'), href: '#skills', index: '03' },
+    { label: t('projects'), href: '#projects', index: '04' },
+    { label: t('contact'), href: '#contact', index: '05' },
   ];
 
   return (
