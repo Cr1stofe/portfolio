@@ -1,5 +1,12 @@
 import { getTranslations } from 'next-intl/server';
-import { PlayCircle, Layers, Server, Code2, Sparkles } from 'lucide-react';
+import {
+  Layers,
+  Server,
+  Code2,
+  Sparkles,
+  Globe2,
+  Smartphone,
+} from 'lucide-react';
 import {
   ProjectsCarousel,
   type ProjectItem,
@@ -31,6 +38,7 @@ export async function Projects({ locale }: { locale: string }) {
       githubUrl: 'https://github.com/Cr1stofe/tailored-cv',
       liveUrl: 'https://api-docs-tailored-cv.cr1stofe.dev/docs',
       liveLabel: t('apiDocs'),
+      liveLinkType: 'api_docs',
       featuredIcon: <Sparkles className="h-5 w-5 text-orange-400" />,
       accentBg: 'bg-ocean-700',
       accentBorder: 'border-ocean-600',
@@ -51,6 +59,7 @@ export async function Projects({ locale }: { locale: string }) {
       stack: ['Next.js', 'TypeScript', 'BFF', 'Zustand', 'SCSS Modules', 'Zod'],
       githubUrl: 'https://github.com/Cr1stofe/lms-front-next',
       liveUrl: 'https://veltro.cr1stofe.dev/',
+      liveLinkType: 'live_demo',
       featuredIcon: <Layers className="h-5 w-5" />,
       accentBg: 'bg-white',
       accentBorder: 'border-slate-200',
@@ -80,7 +89,50 @@ export async function Projects({ locale }: { locale: string }) {
       githubUrl: 'https://github.com/Cr1stofe/lms-nest-postgres',
       liveUrl: 'https://api-veltro.cr1stofe.dev/api/docs',
       liveLabel: t('apiDocs'),
-      featuredIcon: <PlayCircle className="h-5 w-5 text-orange-400" />,
+      liveLinkType: 'api_docs',
+      featuredIcon: <Server className="h-5 w-5 text-orange-400" />,
+      accentBg: 'bg-ocean-700',
+      accentBorder: 'border-ocean-600',
+      accentIcon: 'bg-ocean-600/80 border-ocean-500 text-white',
+      accentHover: 'group-hover:text-white',
+      dark: true,
+    },
+    {
+      title: t('items.ranking.title'),
+      category: t('items.ranking.category'),
+      status: t('items.ranking.status'),
+      description: t('items.ranking.description'),
+      highlights: [
+        t('items.ranking.h1'),
+        t('items.ranking.h2'),
+        t('items.ranking.h3'),
+      ],
+      stack: ['Next.js', 'React', 'TypeScript', 'Zustand', 'Core Web Vitals'],
+      liveUrl: 'https://ranking.org.br/',
+      liveLabel: t('viewSite'),
+      liveLinkType: 'website',
+      featuredIcon: <Globe2 className="h-5 w-5" />,
+      accentBg: 'bg-white',
+      accentBorder: 'border-slate-200',
+      accentIcon: 'bg-slate-100 border-slate-200 text-ocean-700',
+      accentHover: 'group-hover:text-ocean-700',
+    },
+    {
+      title: t('items.motul.title'),
+      category: t('items.motul.category'),
+      status: t('items.motul.status'),
+      description: t('items.motul.description'),
+      highlights: [
+        t('items.motul.h1'),
+        t('items.motul.h2'),
+        t('items.motul.h3'),
+      ],
+      stack: ['Flutter', 'Dart', 'REST APIs', 'Mobile'],
+      liveUrl:
+        'https://play.google.com/store/apps/details?id=br.com.motulexpert&hl=pt_BR',
+      liveLabel: t('googlePlay'),
+      liveLinkType: 'app_store',
+      featuredIcon: <Smartphone className="h-5 w-5 text-orange-400" />,
       accentBg: 'bg-ocean-700',
       accentBorder: 'border-ocean-600',
       accentIcon: 'bg-ocean-600/80 border-ocean-500 text-white',
@@ -112,41 +164,22 @@ export async function Projects({ locale }: { locale: string }) {
       accentIcon: 'bg-slate-100 border-slate-200 text-ocean-700',
       accentHover: 'group-hover:text-ocean-700',
     },
-    {
-      title: t('items.lmsExpress.title'),
-      category: t('items.lmsExpress.category'),
-      status: t('items.lmsExpress.status'),
-      description: t('items.lmsExpress.description'),
-      highlights: [
-        t('items.lmsExpress.h1'),
-        t('items.lmsExpress.h2'),
-        t('items.lmsExpress.h3'),
-      ],
-      stack: ['Express', 'Node.js', 'PostgreSQL', 'JWT', 'TypeScript'],
-      githubUrl: 'https://github.com/Cr1stofe/lms-express-postgres',
-      featuredIcon: <Server className="h-5 w-5 text-orange-400" />,
-      accentBg: 'bg-ocean-700',
-      accentBorder: 'border-ocean-600',
-      accentIcon: 'bg-ocean-600/80 border-ocean-500 text-white',
-      accentHover: 'group-hover:text-white',
-      dark: true,
-    },
   ];
 
   return (
     <section
       id="projects"
-      className="border-b border-slate-200 bg-slate-50/70 py-14 md:py-20"
+      className="border-b border-slate-200 bg-slate-50 py-16 md:py-24"
     >
       <div className="mx-auto max-w-7xl px-6 md:px-12">
-        <div className="mb-14 max-w-3xl">
+        <div className="mb-10 max-w-2xl">
           <span className="mb-3 block text-xs font-bold uppercase tracking-widest text-orange-600">
             {t('tag')}
           </span>
-          <h2 className="mb-4 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
+          <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl md:text-4xl">
             {t('title')}
           </h2>
-          <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
+          <p className="text-[15px] leading-relaxed text-slate-600">
             {t('desc')}
           </p>
         </div>

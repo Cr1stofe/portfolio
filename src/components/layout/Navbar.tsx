@@ -47,7 +47,7 @@ export function Navbar() {
 
   const mobileMenuContent = (
     <div
-      className={`fixed inset-0 z-[9999] flex h-[100dvh] w-screen flex-col justify-between bg-white transition-all duration-300 md:hidden ${
+      className={`fixed inset-0 z-[9999] flex h-[100dvh] w-screen flex-col justify-between bg-white transition-all duration-300 lg:hidden ${
         isOpen
           ? 'pointer-events-auto visible opacity-100'
           : 'pointer-events-none invisible opacity-0'
@@ -144,7 +144,7 @@ export function Navbar() {
             />
           </a>
 
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-8 lg:flex">
             <NavigationBar direction="row" />
 
             <div className="flex items-center gap-3 border-l border-slate-200 pl-4">
@@ -176,7 +176,7 @@ export function Navbar() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(true)}

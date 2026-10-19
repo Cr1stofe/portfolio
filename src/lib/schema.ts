@@ -20,9 +20,40 @@ export function generatePersonSchema(locale: string, siteUrl: string) {
           'NestJS',
           'Node.js',
           'PostgreSQL',
+          'Prisma ORM',
           'Docker',
+          'Caddy Server',
+          'Zustand',
+          'React Hook Form',
+          'Zod',
+          'SCSS Modules',
           'Tailwind CSS',
+          'Cloudflare',
+          'Oracle Cloud Infrastructure',
+          'Linux',
+          'Flutter',
         ],
+        hasOccupation: {
+          '@type': 'Occupation',
+          name:
+            locale === 'pt'
+              ? 'Desenvolvedor Full Stack'
+              : 'Full Stack Developer',
+          occupationLocation: {
+            '@type': 'City',
+            name: 'Fortaleza',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'BR',
+            },
+          },
+          description:
+            locale === 'pt'
+              ? 'Desenvolvedor com base em frontend que cria aplicações rápidas, seguras e sustentáveis — da interface ao deploy.'
+              : 'Frontend-rooted developer who builds fast, secure, and maintainable applications — from the interface to deployment.',
+          skills:
+            'Next.js, React, TypeScript, NestJS, Node.js, PostgreSQL, Prisma, Docker',
+        },
       },
       {
         '@type': 'WebSite',

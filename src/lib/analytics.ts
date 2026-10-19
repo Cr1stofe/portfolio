@@ -1,7 +1,10 @@
+export type ProjectLinkType =
+  'live_demo' | 'api_docs' | 'github_repo' | 'website' | 'app_store';
+
 export interface ProjectClickEvent {
   event: 'project_click';
   project_name: string;
-  link_type: 'live_demo' | 'api_docs' | 'github_repo';
+  link_type: ProjectLinkType;
   destination_url: string;
 }
 
@@ -23,8 +26,18 @@ export interface CtaClickEvent {
   destination_href: string;
 }
 
+export interface CvDownloadEvent {
+  event: 'cv_download';
+  locale: string;
+  file_name: string;
+}
+
 export type AnalyticsEvent =
-  ProjectClickEvent | ContactClickEvent | LanguageChangeEvent | CtaClickEvent;
+  | ProjectClickEvent
+  | ContactClickEvent
+  | LanguageChangeEvent
+  | CtaClickEvent
+  | CvDownloadEvent;
 
 export function sendAnalyticsEvent(data: AnalyticsEvent): void {
   if (typeof window === 'undefined') return;
@@ -43,7 +56,7 @@ export function sendAnalyticsEvent(data: AnalyticsEvent): void {
 
 export function trackProjectClick(
   projectName: string,
-  linkType: 'live_demo' | 'api_docs' | 'github_repo',
+  linkType: ProjectLinkType,
   destinationUrl: string
 ): void {
   sendAnalyticsEvent({
@@ -81,5 +94,13 @@ export function trackCtaClick(ctaName: string, destinationHref: string): void {
     event: 'cta_click',
     cta_name: ctaName,
     destination_href: destinationHref,
+  });
+}
+
+export function trackCvDownload(locale: string, fileName: string): void {
+  sendAnalyticsEvent({
+    event: 'cv_download',
+    locale,
+    file_name: fileName,
   });
 }
