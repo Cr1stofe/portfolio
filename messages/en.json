@@ -114,7 +114,7 @@
       "rankingScore": {
         "value": "99",
         "label": "Lighthouse Performance",
-        "context": "Ranking dos Políticos · desktop score"
+        "context": "desktop score"
       },
       "motul": {
         "value": "100k+",
@@ -124,7 +124,7 @@
       "motulStability": {
         "value": "0%",
         "label": "user-perceived crash rate",
-        "context": "Motul Expert · measured 28-day period"
+        "context": "measured 28-day period"
       }
     },
     "education": {

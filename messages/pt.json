@@ -117,7 +117,7 @@
       "rankingScore": {
         "value": "99",
         "label": "Performance no Lighthouse",
-        "context": "Ranking dos Políticos · nota desktop"
+        "context": "nota desktop"
       },
       "motul": {
         "value": "100 mil+",
@@ -127,7 +127,7 @@
       "motulStability": {
         "value": "0%",
         "label": "taxa de crashes percebidos",
-        "context": "Motul Expert · período medido de 28 dias"
+        "context": "período medido de 28 dias"
       }
     },
     "education": {
